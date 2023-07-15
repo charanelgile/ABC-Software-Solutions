@@ -4,12 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/Home" className='fw-bold fs-1 text-light'>ABC Tech Solutions</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto fw-bold">
             <Nav.Link href="/Home">Home</Nav.Link>
             <Nav.Link href="/Contact">Contact</Nav.Link>
             <Nav.Link href="/Services">Services</Nav.Link>
