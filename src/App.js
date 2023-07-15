@@ -1,22 +1,32 @@
-import "./App.css";
+import React from 'react';
+import Header from './components/Header';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import Testimonials from './pages/Testimonials';
+import WhoWeAre from './pages/WhoWeAre';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+          <Header />
+        <Routes>
+            <Route path='/Home' element={<Home />}>
+             </Route>
+             <Route path='/Contact' element={<Contact />}>
+             </Route>
+             <Route path='/Services' element={<Services />}>
+             </Route>
+             <Route path='/Testimonials' element={<Testimonials />}>
+             </Route>
+             <Route path='/WhoWeAre' element={<WhoWeAre />}>
+             </Route>
+
+        </Routes>
+
+    </Router>
+  )
 }
 
 export default App;
