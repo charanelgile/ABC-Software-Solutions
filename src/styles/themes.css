@@ -1,5 +1,6 @@
 .bgColorBrand {
-  background-color: rgb(30, 175, 215) !important;
+  /* background-color: rgb(30, 175, 215) !important; */
+  background-color: rgb(40, 180, 220) !important;
 }
 
 .bgColorDarkTheme {
@@ -11,7 +12,7 @@
 }
 
 .txtColorBrand {
-  color: rgb(30, 175, 215) !important;
+  color: rgb(40, 180, 220) !important;
 }
 
 .txtColorDarkTheme {
@@ -19,5 +20,5 @@
 }
 
 .txtColorLightTheme {
-  color: rgb(80, 80, 85) !important;
+  color: rgb(65, 65, 70) !important;
 }

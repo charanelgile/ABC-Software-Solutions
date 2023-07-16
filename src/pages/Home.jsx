@@ -4,6 +4,7 @@ import React from "react";
 // Components ang Pages Imports
 import HeaderHome from "../components/HeaderHome";
 import HowItWorks from "../components/HowItWorks";
+import Footer from "../components/Footer";
 
 // Miscellaneous Imports
 import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
@@ -36,19 +37,19 @@ const Home = () => {
 
           <div id="homeActionButtons">
             <a
-              href="./Services"
+              href="/Services"
               className="bgColorBrand txtColorDarkTheme btn">
               Get Started
             </a>
 
             <a
-              href="./Home"
+              href="/"
               className="bgColorBrand txtColorDarkTheme btn">
               Why Choose ABC?
             </a>
 
             <a
-              href="./Pricing"
+              href="/Pricing"
               className="txtColorDarkTheme btn border">
               View Pricing Plans
             </a>
@@ -59,6 +60,7 @@ const Home = () => {
       {HowItWorksData.map((data) => {
         return (
           <HowItWorks
+            id="HowItWorks"
             key={data.howID}
             howDivArrangement={data.howDivArrangement}
             howID={data.howID}
@@ -70,6 +72,8 @@ const Home = () => {
           />
         );
       })}
+
+      <Footer />
     </div>
   );
 };

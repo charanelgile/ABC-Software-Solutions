@@ -1,70 +1,72 @@
+// Library Imports
 import React from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
-import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
+
+// Components ang Pages Imports
+
+// Miscellaneous Imports
+import "../styles/styles.css";
+import "../styles/themes.css";
 
 export default function Footer() {
   return (
-    <MDBFooter
-      bgColor="light"
-      className="text-center text-lg-start text-muted">
-      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+    <MDBFooter className="bgColorDarkTheme text-lg-start">
+      <section className="ftrSocialLinks d-flex justify-content-center justify-content-lg-between border-bottom">
+        <div className="txtColorDarkTheme d-none d-lg-block">
+          <span>Connect with us on social media:</span>
         </div>
 
-        <div className="ms-auto">
-          <a
-            href="https://facebook.com/"
-            className="me-4 text-reset">
-            <FacebookIcon />
-          </a>
-          <a
-            href="https://instagram.com/"
-            className="me-4 text-reset">
-            <InstagramIcon />
-          </a>
-          <a
-            href="https://twitter.com/"
-            className="me-4 text-reset">
-            <TwitterIcon />
-          </a>
+        <div className="txtColorBrand">
           <a
             href="https://linkedin.com/"
-            className="me-4 text-reset">
+            className="text-reset">
             <LinkedInIcon />
           </a>
+
           <a
-            href="https://github.com/charanelgile/ABC-Software-Solutions"
-            className="me-4 text-reset">
-            <GitHubIcon />
+            href="https://facebook.com/"
+            className="ms-4 text-reset">
+            <FacebookIcon />
+          </a>
+
+          <a
+            href="https://instagram.com/"
+            className="ms-4 text-reset">
+            <InstagramIcon />
+          </a>
+
+          <a
+            href="https://twitter.com/"
+            className="ms-4 text-reset">
+            <TwitterIcon />
           </a>
         </div>
       </section>
 
-      <section className="">
-        <MDBContainer className="text-center text-md-start mt-5">
-          <MDBRow className="mt-3">
+      <section>
+        <MDBContainer
+          fluid
+          className="txtColorDarkTheme text-center text-md-start">
+          <MDBRow className="ftrColumnLinks">
             <MDBCol
-              md="3"
-              lg="4"
-              xl="3"
-              className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                <DiamondOutlinedIcon />
-                ABC Tech Solutions
+              md="4"
+              lg="3"
+              xl="4"
+              id="ftrColumn1">
+              <h6 className="txtColorBrand text-uppercase fw-bold mb-3">
+                ABC Software Solutions &copy; 2023
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit.
+                Robust, powerful, and fully-customizable application for
+                every department your company has, all in one place,
+                available in mobile and web.
               </p>
             </MDBCol>
 
@@ -72,27 +74,29 @@ export default function Footer() {
               md="2"
               lg="2"
               xl="2"
-              className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+              id="ftrColumn2">
+              <h6 className="txtColorBrand text-uppercase fw-bold mb-3">
+                Tech Stack
+              </h6>
               <p>
                 <a
                   href="#!"
                   className="text-reset">
-                  Angular
+                  ReactJS
                 </a>
               </p>
               <p>
                 <a
                   href="#!"
                   className="text-reset">
-                  React
+                  NodeJS
                 </a>
               </p>
               <p>
                 <a
                   href="#!"
                   className="text-reset">
-                  Vue
+                  PHP
                 </a>
               </p>
               <p>
@@ -105,11 +109,27 @@ export default function Footer() {
             </MDBCol>
 
             <MDBCol
-              md="3"
+              md="2"
               lg="2"
               xl="2"
-              className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
+              id="ftrColumn3">
+              <h6 className="txtColorBrand text-uppercase fw-bold mb-3">
+                Useful links
+              </h6>
+              <p>
+                <a
+                  href="#!"
+                  className="text-reset">
+                  Blog
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#!"
+                  className="text-reset">
+                  Services
+                </a>
+              </p>
               <p>
                 <a
                   href="#!"
@@ -121,21 +141,7 @@ export default function Footer() {
                 <a
                   href="#!"
                   className="text-reset">
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a
-                  href="#!"
-                  className="text-reset">
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a
-                  href="#!"
-                  className="text-reset">
-                  Help
+                  Help Center
                 </a>
               </p>
             </MDBCol>
@@ -143,38 +149,39 @@ export default function Footer() {
             <MDBCol
               md="4"
               lg="3"
-              xl="3"
-              className="mx-auto mb-md-0 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+              xl="4"
+              id="ftrColumn4">
+              <h6 className="txtColorBrand text-uppercase fw-bold mb-3">
+                Contact
+              </h6>
+
               <p>
-                <AddLocationAltIcon />
-                New York, NY 10012, US
+                <FmdGoodIcon />
+                &nbsp; 24F Magsaysay Bldg., IT Park, Cebu City, PH
               </p>
+
               <p>
                 <EmailIcon />
-                ABCTechSupport@gmail.com
+                &nbsp; support@abc.com.ph
               </p>
+
               <p>
-                <PhoneIcon /> + 01 234 567 88
-              </p>
-              <p>
-                <PhoneIcon /> + 01 234 567 89
+                <PhoneIcon />
+                &nbsp; (02) 3709 5162
               </p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
 
-      <div
-        className="text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
+      {/* <div className="txtColorDarkTheme text-center p-4">
         © 2023 Copyright: &nbsp;
         <a
           className="text-reset fw-bold"
           href="https://mdbootstrap.com/">
           ABCTechSolutions.com
         </a>
-      </div>
+      </div> */}
     </MDBFooter>
   );
 }
