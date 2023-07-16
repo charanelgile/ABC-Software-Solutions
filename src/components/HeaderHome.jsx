@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "../styles/styles.css";
 import "../styles/themes.css";
 
-function Header() {
+function HeaderHome() {
   return (
     <div>
       <Navbar
@@ -13,18 +13,18 @@ function Header() {
         <Container
           fluid
           id="navigation"
-          className="w-100">
+          className="w-100 fw-bold txtColorLightTheme">
           <Navbar.Brand
-            href="/Home"
-            className="txtColorDarkTheme fw-bold">
+            href="/"
+            className="txtColorDarkTheme">
             ABC Software Solutions
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <div className="w-100">
-              <Nav className="flexRowEnd fw-bold">
+              <Nav className="flexRowEnd">
                 <Nav.Link
-                  href="/Home"
+                  href="/"
                   className="txtColorDarkTheme">
                   Home
                 </Nav.Link>
@@ -61,4 +61,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderHome;

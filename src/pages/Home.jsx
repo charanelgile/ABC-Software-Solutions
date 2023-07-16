@@ -2,9 +2,11 @@
 import React from "react";
 
 // Components ang Pages Imports
-import Header from "../components/Header";
+import HeaderHome from "../components/HeaderHome";
+import HowItWorks from "../components/HowItWorks";
 
 // Miscellaneous Imports
+import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
 import "../styles/styles.css";
 import "../styles/themes.css";
 
@@ -16,36 +18,54 @@ const Home = () => {
       <div
         id="homeBannerImage"
         className="bgFullWidthImage">
-        <Header />
+        <HeaderHome />
 
-        <div
-          id="homeBannerText"
-          className="txtColorDarkTheme">
-          <h1>
+        <div id="homeBannerText">
+          <h1 className="txtColorDarkTheme">
             Tailor-made software solutions for your growing business'
             needs.
           </h1>
 
-          <p>
+          <p className="txtColorDarkTheme">
             Robust, powerful, and fully-customizable application for every
             department your company has, all in one place, available in
             mobile and web.
-            <hr />
           </p>
 
+          <hr className="border-white" />
+
           <div id="homeActionButtons">
-            <button className="bgColorBrand txtColorDarkTheme btn">
+            <a
+              href="./Services"
+              className="bgColorBrand txtColorDarkTheme btn">
               Get Started
-            </button>
-            <button className="bgColorBrand txtColorDarkTheme btn">
-              How It Works
-            </button>
-            <button className="txtColorDarkTheme btn border">
+            </a>
+
+            <a
+              href="./Home"
+              className="bgColorBrand txtColorDarkTheme btn">
+              Why Choose ABC?
+            </a>
+
+            <a
+              href="./Pricing"
+              className="txtColorDarkTheme btn border">
               View Pricing Plans
-            </button>
+            </a>
           </div>
         </div>
       </div>
+
+      {HowItWorksData.map((data) => {
+        return (
+          <HowItWorks
+            key={data.howID}
+            howTitle={data.howTitle}
+            howText={data.howText}
+            howImage={data.howImage}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: rgb(80, 80, 85) !important;
   box-sizing: border-box;
 }
 
@@ -38,6 +39,10 @@
   padding: 0.7rem 5rem !important;
 }
 
+.navCurrent {
+  border-bottom: 2px solid rgb(30, 175, 215);
+}
+
 .bgFullWidthImage {
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -65,12 +70,17 @@
   text-align: justify;
 }
 
+#homeBannerText hr {
+  width: 85%;
+}
+
 #homeActionButtons {
   margin: 2.5em 0;
 }
 
-#homeActionButtons button {
+#homeActionButtons a {
   font-size: 90%;
   padding: 12px 15px;
   margin-right: 1.5rem;
+  letter-spacing: 0.01rem;
 }

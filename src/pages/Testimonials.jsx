@@ -2,7 +2,7 @@
 import React from "react";
 
 // Components ang Pages Imports
-import Header from "../components/Header";
+import HeaderPages from "../components/HeaderPages";
 
 // Miscellaneous Imports
 import "../styles/styles.css";
@@ -11,7 +11,7 @@ import "../styles/themes.css";
 const Testimonials = () => {
   return (
     <div className="bgColorLightTheme ">
-      <Header />
+      <HeaderPages />
       <p className="txtColorLightTheme">This is the Testimonials Page</p>
     </div>
   );

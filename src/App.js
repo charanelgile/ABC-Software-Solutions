@@ -1,5 +1,4 @@
 import React from "react";
-// import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -13,7 +12,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route
-          path="/Home"
+          path="/"
           element={<Home />}></Route>
 
         <Route
