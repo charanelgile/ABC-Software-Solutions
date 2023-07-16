@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div
       id="pageLandingHome"
-      className="bgColorLightTheme">
+      className="bgColorLightTheme txtColorLightTheme">
       <div
         id="homeBannerImage"
         className="bgFullWidthImage">
@@ -32,7 +32,7 @@ const Home = () => {
             mobile and web.
           </p>
 
-          <hr className="border-white" />
+          <hr className="text-white" />
 
           <div id="homeActionButtons">
             <a
@@ -60,9 +60,13 @@ const Home = () => {
         return (
           <HowItWorks
             key={data.howID}
+            howDivArrangement={data.howDivArrangement}
+            howID={data.howID}
             howTitle={data.howTitle}
             howText={data.howText}
+            howLearnMore={data.howLearnMore}
             howImage={data.howImage}
+            howImagePosition={data.howImagePosition}
           />
         );
       })}
