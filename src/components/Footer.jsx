@@ -1,33 +1,40 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import DiamondOutlinedIcon from '@mui/icons-material/DiamondOutlined';
 
 export default function Footer() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted fixed-bottom'>
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
           <span>Get connected with us on social networks:</span>
         </div>
 
-        <div>
+        <div className='ms-auto'>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
+          <FacebookIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
+            <InstagramIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
+            <TwitterIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
+            <LinkedInIcon />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
+            <GitHubIcon />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
+          
         </div>
       </section>
 
@@ -36,8 +43,8 @@ export default function Footer() {
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
-                Company name
+              <DiamondOutlinedIcon />
+                ABC Tech Solutions
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
@@ -96,18 +103,18 @@ export default function Footer() {
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
-                <MDBIcon icon="home" className="me-2" />
+                <AddLocationAltIcon />
                 New York, NY 10012, US
               </p>
               <p>
-                <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                <EmailIcon />
+                ABCTechSupport@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+               <PhoneIcon /> + 01 234 567 88
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+              <PhoneIcon /> + 01 234 567 89
               </p>
             </MDBCol>
           </MDBRow>
@@ -115,9 +122,9 @@ export default function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
+        © 2023 Copyright: &nbsp;
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          ABCTechSolutions.com
         </a>
       </div>
     </MDBFooter>
