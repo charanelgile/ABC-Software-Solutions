@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 // Miscellaneous Imports
 import "../styles/styles.css";
 import "../styles/themes.css";
+import RatingsCard from "../components/Ratings";
 
 const Testimonials = () => {
   return (
@@ -15,6 +16,8 @@ const Testimonials = () => {
       <HeaderPages />
 
       <h1 className="text-center">Testimonials Page</h1>
+
+      <RatingsCard />
 
       <Footer />
     </div>
