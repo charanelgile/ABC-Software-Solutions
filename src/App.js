@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import WhoWeAre from "./pages/WhoWeAre";
-import Products from "./pages/Products";
+import Testimonials from "./pages/Testimonials";
 
 const App = () => {
   return (
@@ -28,8 +28,8 @@ const App = () => {
           element={<Contact />}></Route>
 
         <Route
-          path="/Products"
-          element={<Products />}></Route>
+          path="/Testimonials"
+          element={<Testimonials />}></Route>
       </Routes>
       {/* <Footer /> */}
     </Router>

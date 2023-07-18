@@ -42,9 +42,9 @@ function HeaderHome() {
                 </Nav.Link>
 
                 <Nav.Link
-                  href="/Products"
+                  href="/Testimonials"
                   className="txtColorDarkTheme">
-                  Products
+                  Testimonials
                 </Nav.Link>
 
                 <Nav.Link

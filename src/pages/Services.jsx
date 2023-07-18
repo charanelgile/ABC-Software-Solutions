@@ -8,6 +8,7 @@ import PricingCardsContent from "../data/PricingCardsContent";
 // Miscellaneous Imports
 import "../styles/styles.css";
 import "../styles/themes.css";
+import Testimonials from "../data/Testimonials";
 
 const Services = () => {
   return (
@@ -16,6 +17,7 @@ const Services = () => {
 
       <h1 className="text-center">This is the Services Page</h1>
         <PricingCardsContent />
+        <Testimonials />
       <Footer />
     </div>
   );
