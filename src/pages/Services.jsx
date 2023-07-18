@@ -9,6 +9,7 @@ import PricingCardsContent from "../data/PricingCardsContent";
 // Miscellaneous Imports
 import "../styles/styles.css";
 import "../styles/themes.css";
+import Testimonials from "../data/Testimonials";
 
 const Services = () => {
   return (
@@ -24,6 +25,9 @@ const Services = () => {
       />
 
       <PricingCardsContent />
+
+      <Testimonials />
+
       <Footer />
     </div>
   );
