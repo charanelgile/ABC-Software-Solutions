@@ -190,3 +190,9 @@
 #ftrColumn3 a {
   text-decoration: none;
 }
+
+.Ratings{
+    height: 400px;
+    width: 100%;
+    background-color: beige;
+}
