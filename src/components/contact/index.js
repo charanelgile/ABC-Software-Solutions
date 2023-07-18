@@ -100,7 +100,7 @@ export default function ContactUs() {
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button  class="btn btn-primary" type="submit" color="warning"> 
+                  <button  class="btn btn-info" type="submit" color="warning"> 
                   <b>Submit</b>
                   </button>
                 </Col>
