@@ -55,13 +55,17 @@
   border-bottom: 2px solid rgb(30, 175, 215);
 }
 
-/***** Landing Page *****/
-.bgFullWidthImage {
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
+/* Page Banner Image */
+.pageBannerImage {
+  width: 100vw;
+  height: 275px;
 }
 
-/* Banne Image */
+.pageBannerImage p {
+  font-size: 110%;
+}
+
+/* Home Banner Image */
 #homeBannerImage {
   width: 100%;
   height: 100vh;
@@ -71,6 +75,12 @@
       rgba(0, 0, 0, 0.1)
     ),
     url("https://images.unsplash.com/photo-1634908800785-d3df980d179e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHdvbWFuJTIwaW4lMjBjYWZlJTIwd2l0aCUyMGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
+}
+
+/***** Landing Page *****/
+.bgFullWidthImage {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 #homeBannerText {
@@ -135,13 +145,30 @@
 }
 
 /***** Who We Are *****/
-.pageBannerImage {
-  width: 100vw;
-  height: 275px;
+#divAboutTheTeam,
+#divAboutTheCompany {
+  padding: 1rem 10%;
+  text-align: justify;
+  /* background-color: slateblue; */
 }
 
-.pageBannerImage p {
-  font-size: 110%;
+#divAboutTheCompany {
+  margin: 2.5rem 0 1rem;
+}
+
+#divProfileCards {
+  margin: 1.5rem 0 3rem;
+}
+
+.profileSocialLinks {
+  width: 50px;
+  font-size: 170%;
+  text-align: center;
+  /* background-color: gold; */
+}
+
+.profileSocialLinks:hover {
+  color: rgb(45, 45, 50) !important;
 }
 
 /***** Footer *****/
