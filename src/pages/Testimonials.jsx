@@ -8,8 +8,7 @@ import Footer from "../components/Footer";
 // Miscellaneous Imports
 import "../styles/styles.css";
 import "../styles/themes.css";
-import RatingsCard from "../components/Ratings";
-
+import RatingsCard from "../data/RatingsCard";
 const Testimonials = () => {
   return (
     <div className="bgColorLightTheme txtColorLightTheme">

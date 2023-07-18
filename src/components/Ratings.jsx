@@ -1,32 +1,42 @@
-import React from 'react'
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import StarIcon from '@mui/icons-material/Star';
+import StarHalfIcon from '@mui/icons-material/StarHalf';
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import Image from 'react-bootstrap/Image';
 
-const Ratings = () => {
-  return (
-    <>
-      <div className="container">
-      <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Subtitle className="mb-2 text-muted">
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-        </Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Image src="./images/rating/harry.jpg" roundedCircle />
-        <span><strong>Harry Potter</strong></span>
-      </Card.Body>
-    </Card>
-      </div>
-    </>
-  )
-}
+const Ratings = ({ rating, comment, imageSrc, authorName }) => {
+  // Calculate the number of filled stars (whole number part of the rating)
+  const filledStars = Math.floor(rating);
 
-export default Ratings
+  // Check if there is a decimal part for half-star display
+  const hasHalfStar = rating % 1 !== 0;
+
+  // Calculate the number of empty stars
+  const emptyStars = 5 - filledStars - (hasHalfStar ? 1 : 0);
+
+  return (
+    <div className="container">
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Subtitle className="mb-2 text-muted">
+            {Array.from({ length: filledStars }, (_, index) => (
+              <StarIcon key={index} />
+            ))}
+            {hasHalfStar && <StarHalfIcon />}
+            {Array.from({ length: emptyStars }, (_, index) => (
+              <StarBorderOutlinedIcon key={index} style={{ opacity: 0.5 }} />
+            ))}
+          </Card.Subtitle>
+          <Card.Text>{comment}</Card.Text>
+          <Image src={imageSrc} roundedCircle />
+          <span>
+            <strong>{authorName}</strong>
+          </span>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+};
+
+export default Ratings;

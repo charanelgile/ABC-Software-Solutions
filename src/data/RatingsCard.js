@@ -1,20 +1,17 @@
-import React from 'react';
-import Ratings from './components/RatingsCard';
+import React from "react";
+import Ratings from "../components/Ratings";
 
-const RatingsCard = () => {
+function RatingsCard() {
   return (
     <div>
-      <h1>Product Ratings</h1>
       <Ratings
         rating={4.5}
-        comment="Some quick example text to build on the card title and make up the bulk of the card's content."
-        imageSrc="./images/rating/harry.jpg"
-        authorName="Harry Potter"
-        
+        comment="This is a great product!"
+        imageSrc="path/to/image.jpg"
+        authorName="John Doe"
       />
-      
     </div>
   );
-};
+}
 
 export default RatingsCard;
