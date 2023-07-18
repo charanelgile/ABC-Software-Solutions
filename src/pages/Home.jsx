@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
 import "../styles/styles.css";
 import "../styles/themes.css";
+import RatingsCard from "../data/RatingsCard";
 
 const Home = () => {
   return (
@@ -72,6 +73,13 @@ const Home = () => {
           />
         );
       })}
+
+     <div className="Ratings">
+     <h2 className="text-center">What People Thinks About Us?</h2>
+      <div>
+        <RatingsCard />
+      </div>
+     </div>
 
       <Footer />
     </div>
