@@ -6,7 +6,6 @@ import {
   CardContent,
   CardActions,
   Typography,
-  Link,
 } from "@mui/material";
 import {
   Linkedin,
