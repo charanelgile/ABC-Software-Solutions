@@ -1,5 +1,6 @@
 import React from 'react';
 import PricingCards from '../components/PricingCards';
+
 function PricingCardsContent() {
   return (
     <>

@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import "../styles/styles.css";
 import "../styles/themes.css";
 import RatingsCard from "../data/RatingsCard";
-const Testimonials = () => {
+const Products = () => {
   return (
     <div className="bgColorLightTheme txtColorLightTheme">
       <HeaderPages />
@@ -23,4 +23,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Products;
