@@ -3,14 +3,14 @@ export const ProfileCardsData = [
     profilePhoto:
       "https://images.unsplash.com/photo-1611067616221-213ed86ea8e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
     fullName: "Anzarie Laguiamuda",
-    shortIntro: `Based in ______, he is the Full Stack
+    shortIntro: `Based in Manila, he is the Full Stack
       web expert of this trio dynamic, able to jump in
       at any stage of their ongoing projects.`,
     email: "anzariekl@gmail.com",
-    phone: "+63 999 999 9999",
+    phone: "+63 920 266 6332",
     linkedinURL: "https://linkedin.com/in/____________",
-    githubURL: "https://github.com/____________",
-    facebookURL: "https://facebook.com/____________",
+    githubURL: "https://github.com/ANZARIE/ANZARIE.github.io",
+    facebookURL: "https://facebook.com/itsme.anza",
     instagramURL: "https://instagram.com/____________",
   },
   {
