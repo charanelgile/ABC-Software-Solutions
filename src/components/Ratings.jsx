@@ -1,9 +1,9 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import StarIcon from '@mui/icons-material/Star';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
-import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
-import Image from 'react-bootstrap/Image';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import StarIcon from "@mui/icons-material/Star";
+import StarHalfIcon from "@mui/icons-material/StarHalf";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import Image from "react-bootstrap/Image";
 
 const Ratings = ({ rating, comment, imageSrc, authorName }) => {
   // Calculate the number of filled stars (whole number part of the rating)
@@ -17,7 +17,7 @@ const Ratings = ({ rating, comment, imageSrc, authorName }) => {
 
   return (
     <div className="container">
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Subtitle className="mb-2 text-muted">
             {Array.from({ length: filledStars }, (_, index) => (
@@ -29,7 +29,7 @@ const Ratings = ({ rating, comment, imageSrc, authorName }) => {
             ))}
           </Card.Subtitle>
           <Card.Text>{comment}</Card.Text>
-          <Image src={imageSrc} roundedCircle />
+          <Image src={imageSrc} roundedCircle width={30} height={30} />
           <span>
             <strong>{authorName}</strong>
           </span>
