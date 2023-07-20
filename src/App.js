@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import Testimonials from "./pages/Testimonials";
 import WhoWeAre from "./pages/WhoWeAre";
+import PricingCardsContent from "./data/PricingCardsContent";
 
 const App = () => {
   return (
@@ -28,8 +28,8 @@ const App = () => {
           element={<Contact />}></Route>
 
         <Route
-          path="/Testimonials"
-          element={<Testimonials />}></Route>
+          path="/Pricing"
+          element={<PricingCardsContent />}></Route>
       </Routes>
       {/* <Footer /> */}
     </Router>

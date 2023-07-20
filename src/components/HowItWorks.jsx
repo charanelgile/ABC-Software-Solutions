@@ -1,7 +1,8 @@
 // Library Imports
 import React from "react";
 import { Figure } from "react-bootstrap";
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { ArrowRight } from "react-bootstrap-icons";
+
 // Components ang Pages Imports
 
 // Miscellaneous Imports
@@ -22,7 +23,7 @@ const HowItWorks = (props) => {
           className={props.howLearnMore}
           href="/Services">
           Learn More&nbsp;&nbsp;
-          <ArrowRightIcon />
+          <ArrowRight />
         </a>
       </div>
 

@@ -46,12 +46,6 @@ function HeaderPages() {
                   className="txtColorLightTheme">
                   Contact
                 </Nav.Link>
-
-                <Nav.Link
-                  href="/Testimonials"
-                  className="txtColorLightTheme">
-                  Testimonials
-                </Nav.Link>
               </Nav>
             </div>
           </Navbar.Collapse>

@@ -46,12 +46,6 @@ function HeaderHome() {
                   className="txtColorDarkTheme">
                   Contact
                 </Nav.Link>
-
-                <Nav.Link
-                  href="/Testimonials"
-                  className="txtColorDarkTheme">
-                  Testimonials
-                </Nav.Link>
               </Nav>
             </div>
           </Navbar.Collapse>

@@ -9,12 +9,14 @@ import Footer from "../components/Footer";
 import "../styles/styles.css";
 import "../styles/themes.css";
 import RatingsCard from "../data/RatingsCard";
+
 const Testimonials = () => {
   return (
     <div className="bgColorLightTheme txtColorLightTheme">
       <HeaderPages />
 
       <h1 className="text-center">Testimonials Page</h1>
+
 
       <RatingsCard />
 
