@@ -2,7 +2,6 @@
 import React from "react";
 
 // Components ang Pages Imports
-import HeaderHome from "../components/HeaderHome";
 import HowItWorks from "../components/HowItWorks";
 import Footer from "../components/Footer";
 
@@ -11,6 +10,7 @@ import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
 import "../styles/styles.css";
 import "../styles/themes.css";
 import RatingsCard from "../data/RatingsCard";
+import HeaderPages from "../components/HeaderPages";
 
 const Home = () => {
   return (
@@ -20,8 +20,8 @@ const Home = () => {
       <div
         id="homeBannerImage"
         className="bgFullWidthImage">
-        <HeaderHome />
-
+          <HeaderPages />
+        
         <div id="homeBannerText">
           <h1 className="txtColorDarkTheme">
             Tailor-made software solutions for your growing business'
