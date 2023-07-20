@@ -6,7 +6,7 @@ import HeaderPages from "../components/HeaderPages";
 import BannerImage from "../components/BannerImage";
 import Footer from "../components/Footer";
 import ContactUs from "../components/contact";
-
+import Map from "../components/contact/Map";
 // Miscellaneous Imports
 import "../styles/styles.css";
 import "../styles/themes.css";
@@ -23,7 +23,7 @@ const Contact = () => {
         pageTitle="Contact Us"
         pageText="Feel free to reach out anytime you like. We're happy to help."
       />
-
+      <Map/>
       <ContactUs />
       <Footer />
     </div>

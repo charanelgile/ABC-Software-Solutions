@@ -20,11 +20,11 @@ export const ProfileCardsData = [
     shortIntro: `The master of data architecture, management,
       and manipulation. He develops backend applications and easy to integrate API's.`,
     email: "bryanraguine0628@gmail.com",
-    phone: "+63 999 999 9999",
-    linkedinURL: "https://linkedin.com/in/____________",
-    githubURL: "https://github.com/____________",
-    facebookURL: "https://facebook.com/____________",
-    instagramURL: "https://instagram.com/____________",
+    phone: "+63 85 105 0332",
+    linkedinURL: "https://brianraguine0628@gmail.com/in/____________",
+    githubURL: "https://brianRaguine.github.com/____________",
+    facebookURL: "https://EcNeibEneugar.com/____________",
+    instagramURL: "https://brianraguine0628@gmail.com/____________",
   },
   {
     profilePhoto:
