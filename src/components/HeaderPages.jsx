@@ -1,8 +1,11 @@
+import React from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
+import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import "../styles/styles.css";
 import "../styles/themes.css";
+import "./HeaderPages.css";
 
 function HeaderPages() {
   return (
@@ -19,21 +22,32 @@ function HeaderPages() {
           <Navbar.Collapse id="basic-navbar-nav">
             <div className="w-100">
               <Nav className="flexRowEnd">
-                <Nav.Link href="/" className="txtColorLightTheme">
+                {/* Use NavLink instead of Nav.Link */}
+                <NavLink
+                  exact
+                  to="/"
+                  className="nav-link"
+                  activeClassName="active txtColorLightTheme">
                   Home
-                </Nav.Link>
-
-                <Nav.Link href="/Services" className="txtColorLightTheme">
+                </NavLink>
+                <NavLink
+                  to="/Services"
+                  className="nav-link"
+                  activeClassName="active txtColorLightTheme">
                   Services
-                </Nav.Link>
-
-                <Nav.Link href="/WhoWeAre" className="txtColorLightTheme">
+                </NavLink>
+                <NavLink
+                  to="/WhoWeAre"
+                  className="nav-link"
+                  activeClassName="active txtColorLightTheme">
                   Who We Are
-                </Nav.Link>
-
-                <Nav.Link href="/Contact" className="txtColorLightTheme">
+                </NavLink>
+                <NavLink
+                  to="/Contact"
+                  className="nav-link"
+                  activeClassName="active txtColorLightTheme">
                   Contact
-                </Nav.Link>
+                </NavLink>
               </Nav>
             </div>
           </Navbar.Collapse>
