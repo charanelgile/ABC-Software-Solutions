@@ -1,51 +1,53 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom";
 import "../styles/styles.css";
 import "../styles/themes.css";
 
 function HeaderHome() {
   return (
     <div>
-      <Navbar
-        expand="lg"
-        className="container-fluid p-0">
+      <Navbar expand="lg" className="container-fluid p-0">
         <Container
           fluid
           id="navigation"
           className="w-100 fw-bold txtColorLightTheme">
-          <Navbar.Brand
-            href="/"
-            className="txtColorDarkTheme">
+          <Navbar.Brand href="/" className="txtColorDarkTheme">
             ABC Software Solutions
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <div className="w-100">
               <Nav className="flexRowEnd">
-                <Nav.Link
-                  href="/"
-                  className="txtColorDarkTheme">
+                <NavLink
+                  exact
+                  to="/"
+                  id="navHome"
+                  className="txtColorDarkTheme nav-link">
                   Home
-                </Nav.Link>
+                </NavLink>
 
-                <Nav.Link
-                  href="/Services"
-                  className="txtColorDarkTheme">
+                <NavLink
+                  to="/Services"
+                  className="txtColorDarkTheme nav-link"
+                  activeClassName="active">
                   Services
-                </Nav.Link>
+                </NavLink>
 
-                <Nav.Link
-                  href="/WhoWeAre"
-                  className="txtColorDarkTheme">
+                <NavLink
+                  to="/WhoWeAre"
+                  className="txtColorDarkTheme nav-link"
+                  activeClassName="active">
                   Who We Are
-                </Nav.Link>
+                </NavLink>
 
-                <Nav.Link
-                  href="/Contact"
-                  className="txtColorDarkTheme">
+                <NavLink
+                  to="/Contact"
+                  className="txtColorDarkTheme nav-link"
+                  activeClassName="active">
                   Contact
-                </Nav.Link>
+                </NavLink>
               </Nav>
             </div>
           </Navbar.Collapse>
