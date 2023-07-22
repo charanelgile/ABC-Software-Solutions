@@ -4,6 +4,7 @@ import React from "react";
 // Components ang Pages Imports
 import HeaderPages from "../components/HeaderPages";
 import BannerImage from "../components/BannerImage";
+import SellingPoint from "../components/SellingPoint";
 import ProfileCard from "../components/ProfileCard";
 import Footer from "../components/Footer";
 
@@ -29,7 +30,7 @@ const WhoWeAre = () => {
       <div
         id="divAboutTheCompany"
         className="container-fluid">
-        <h3 className="txtColorBrand">About the Company</h3>
+        <h3>About the Company</h3>
 
         <hr />
 
@@ -47,16 +48,18 @@ const WhoWeAre = () => {
         <p>
           &nbsp;&nbsp;&nbsp;So after graduating, they went straight to
           establishing what many consider today as one of the leading
-          software companies in the country. With over 2,000 businesses
+          software companies in the country. With over 1,000 businesses
           (and growing) reaping the benefits of their tailored solutions,
           helping them accomplish more and reach even greater heights.
         </p>
       </div>
 
+      <SellingPoint />
+
       <div
         id="divAboutTheTeam"
         className="container-fluid">
-        <h3 className="txtColorBrand">About the Team</h3>
+        <h3>About the Team</h3>
 
         <hr />
 

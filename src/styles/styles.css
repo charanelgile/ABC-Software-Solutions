@@ -193,11 +193,43 @@
 #divAboutTheCompany {
   padding: 1rem 10%;
   text-align: justify;
-  /* background-color: slateblue; */
+}
+
+#divAboutTheTeam {
+  margin-top: 3rem;
 }
 
 #divAboutTheCompany {
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.divSellingPoints {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+}
+
+.divSellingPoints div {
+  width: 100%;
+  height: 175px;
+  margin: 15px 10px;
+  padding: 20px 40px 20px 25px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.75)
+  );
+  box-shadow: 3px 7px 10px rgba(150, 185, 200, 0.2);
+}
+
+.titleSellingPoint {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.textSellingPoint {
+  font-size: 110%;
 }
 
 #divProfileCards {
@@ -208,7 +240,6 @@
   width: 50px;
   font-size: 170%;
   text-align: center;
-  /* background-color: gold; */
 }
 
 .profileSocialLinks:hover {
