@@ -51,8 +51,21 @@
   padding: 0.7rem 5rem !important;
 }
 
-.navCurrent {
-  border-bottom: 2px solid rgb(30, 175, 215);
+#navHome {
+  color: rgb(240, 240, 240) !important;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 3px solid rgb(240, 240, 240) !important;
+}
+
+/* Active Nav State Styling */
+.nav-link.active {
+  color: rgb(30, 175, 215) !important;
+  padding: 0.3rem 0.5rem !important;
+  border-bottom: 3px solid rgb(30, 175, 215) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(30, 175, 215);
 }
 
 /* Page Banner Image */
@@ -190,7 +203,8 @@
 
 /***** Who We Are *****/
 #divAboutTheTeam,
-#divAboutTheCompany {
+#divAboutTheCompany,
+#divGivingBack {
   padding: 1rem 10%;
   text-align: justify;
 }
@@ -257,6 +271,25 @@
   background-color: rgb(65, 65, 70) !important;
 }
 
+.divGivingBack {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+.txtGivingBack {
+  font-size: 110%;
+}
+
+#imgGreenVille,
+#imgSustainable {
+  background-position-y: 60%;
+}
+
+#imgYOUth {
+  background-position-y: 70%;
+}
+
 /***** Footer *****/
 .ftrSocialLinks {
   align-items: center;
@@ -275,10 +308,4 @@
 #ftrColumn2 a,
 #ftrColumn3 a {
   text-decoration: none;
-}
-
-.Ratings {
-  height: 400px;
-  width: 100%;
-  background-color: beige;
 }

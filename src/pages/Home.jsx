@@ -77,11 +77,14 @@ const Home = () => {
 
       <Partners />
 
-      <div className="Ratings">
-        <h2 className="text-center">What People Thinks About Us?</h2>
-        <div>
-          <RatingsCard />
-        </div>
+      <div
+        id="divRatings"
+        className="mb-5">
+        <h5 className="txtColorLightTheme text-center mb-4">
+          What People Say About Us
+        </h5>
+
+        <RatingsCard />
       </div>
 
       <Footer />

@@ -5,17 +5,20 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import "../styles/styles.css";
 import "../styles/themes.css";
-import "./HeaderPages.css";
 
 function HeaderPages() {
   return (
     <div>
-      <Navbar expand="lg" className="container-fluid p-0">
+      <Navbar
+        expand="lg"
+        className="container-fluid p-0">
         <Container
           fluid
           id="navigation"
           className="w-100 fw-bold txtColorLightTheme">
-          <Navbar.Brand href="/" className="txtColorLightTheme">
+          <Navbar.Brand
+            href="/"
+            className="txtColorLightTheme">
             ABC Software Solutions
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

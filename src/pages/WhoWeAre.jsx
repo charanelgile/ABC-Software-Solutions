@@ -6,6 +6,7 @@ import HeaderPages from "../components/HeaderPages";
 import BannerImage from "../components/BannerImage";
 import SellingPoint from "../components/SellingPoint";
 import ProfileCard from "../components/ProfileCard";
+import GivingBack from "../components/GivingBack";
 import Footer from "../components/Footer";
 
 // Miscellaneous Imports
@@ -59,7 +60,7 @@ const WhoWeAre = () => {
       <div
         id="divAboutTheTeam"
         className="container-fluid">
-        <h3>About the Team</h3>
+        <h3>About the Founders</h3>
 
         <hr />
 
@@ -93,6 +94,23 @@ const WhoWeAre = () => {
             />
           );
         })}
+      </div>
+
+      <div
+        id="divGivingBack"
+        className="container-fluid">
+        <h3>Giving Back to the Community</h3>
+
+        <hr />
+
+        <GivingBack
+          image1='linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1556762163-542910c8765d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA3fHxmYXJtZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+          image2='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQwfHxraWRzJTIwY29kaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+          image3='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1628191011227-522c7c3f0af9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHBhY2tlZCUyMGx1bmNofGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+        />
       </div>
 
       <Footer />

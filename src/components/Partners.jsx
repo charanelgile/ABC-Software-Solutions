@@ -4,10 +4,10 @@ import { PartnersData1, PartnersData2 } from "../data/PartnersData";
 
 const Partners = () => {
   return (
-    <div className="container-fluid m-0 p-0">
-      <h4 className="txtColorLightTheme text-center mb-4">
+    <div className="container-fluid bg-light m-0 p-0 pt-3">
+      <h5 className="txtColorLightTheme text-center mb-4">
         Trusted by our Long-term Partner Businesses:
-      </h4>
+      </h5>
 
       <section>
         <Container

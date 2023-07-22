@@ -24,6 +24,6 @@ export const SellingPointDataB = [
   },
   {
     title: "24/7",
-    text: "priority support",
+    text: "active priority support hotline",
   },
 ];
