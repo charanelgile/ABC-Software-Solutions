@@ -12,6 +12,7 @@ export const ProfileCardsData = [
     githubURL: "https://github.com/ANZARIE/ANZARIE.github.io",
     facebookURL: "https://facebook.com/itsme.anza",
     instagramURL: "https://instagram.com/____________",
+    portfolioURL: "https://github.com/ANZARIE/ANZARIE.github.io",
   },
   {
     profilePhoto:
@@ -22,9 +23,10 @@ export const ProfileCardsData = [
     email: "bryanraguine0628@gmail.com",
     phone: "+63 85 105 0332",
     linkedinURL: "https://facebook.com/EcNeibEneugar",
-    githubURL: "https://brianRaguine.github.com/____________",
+    githubURL: "https://github.com/brianRaguine",
     facebookURL: "https://facebook.com/EcNeibEneugar",
     instagramURL: "https://facebook.com/EcNeibEneugar",
+    portfolioURL: "https://github.com/brianRaguine",
   },
   {
     profilePhoto:
@@ -39,5 +41,6 @@ export const ProfileCardsData = [
     githubURL: "https://github.com/charanelgile",
     facebookURL: "https://facebook.com/charanelgile",
     instagramURL: "https://instagram.com/charanelgile",
+    portfolioURL: "https://charanelgile.github.io/Portfolio",
   },
 ];

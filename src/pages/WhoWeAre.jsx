@@ -86,6 +86,7 @@ const WhoWeAre = () => {
               githubURL={profile.githubURL}
               facebookURL={profile.facebookURL}
               instagramURL={profile.instagramURL}
+              portfolioURL={profile.portfolioURL}
             />
           );
         })}

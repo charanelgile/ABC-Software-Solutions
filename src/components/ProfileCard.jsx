@@ -29,6 +29,7 @@ const ProfileCard = (props) => {
     githubURL,
     facebookURL,
     instagramURL,
+    portfolioURL,
   } = props;
 
   return (
@@ -94,6 +95,14 @@ const ProfileCard = (props) => {
           color="inherit"
           className="profileSocialLinks txtColorBrand">
           <Instagram />
+        </a>
+      </CardActions>
+
+      <CardActions className="mb-3">
+        <a
+          href={portfolioURL}
+          className="profilePortfolioLinks bgColorBrand txtColorDarkTheme btn">
+          Visit Portfolio
         </a>
       </CardActions>
     </Card>

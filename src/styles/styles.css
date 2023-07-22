@@ -148,7 +148,7 @@
 /* Technologies We Use */
 #divTechnologies {
   margin: 3rem 0;
-  padding: 0 20%;
+  padding: 0 15%;
 }
 
 #divTechnologies h3 {
@@ -203,7 +203,18 @@
 }
 
 .profileSocialLinks:hover {
-  color: rgb(45, 45, 50) !important;
+  color: rgb(65, 65, 70) !important;
+}
+
+.profilePortfolioLinks {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 110% !important;
+  padding: 10px 0 !important;
+}
+
+.profilePortfolioLinks:hover {
+  background-color: rgb(65, 65, 70) !important;
 }
 
 /***** Footer *****/
