@@ -18,7 +18,7 @@ function HeaderPages() {
           className="w-100 fw-bold txtColorLightTheme">
           <Navbar.Brand
             href="/"
-            className="txtColorLightTheme">
+            className="txtColorBrand">
             ABC Software Solutions
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

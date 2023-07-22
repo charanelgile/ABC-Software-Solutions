@@ -8,7 +8,7 @@ import Partners from "../components/Partners";
 import Footer from "../components/Footer";
 
 // Miscellaneous Imports
-import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
+import { HowItWorksData } from "../data/HowItWorksData";
 import RatingsCard from "../data/RatingsCard";
 import "../styles/styles.css";
 import "../styles/themes.css";
