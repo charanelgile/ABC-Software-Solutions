@@ -144,6 +144,15 @@
   padding-left: 3rem;
 }
 
+/* Trusted by our Partners */
+.divPartners {
+  height: 90px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 /***** Services *****/
 /* Technologies We Use */
 #divTechnologies {

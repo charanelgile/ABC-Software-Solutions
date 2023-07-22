@@ -2,45 +2,57 @@
 import React from "react";
 
 // Components ang Pages Imports
+import HeaderHome from "../components/HeaderHome";
 import HowItWorks from "../components/HowItWorks";
+import Partners from "../components/Partners";
 import Footer from "../components/Footer";
 
 // Miscellaneous Imports
 import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
+import RatingsCard from "../data/RatingsCard";
 import "../styles/styles.css";
 import "../styles/themes.css";
-import RatingsCard from "../data/RatingsCard";
-import HeaderHome from "../components/HeaderHome";
 
 const Home = () => {
   return (
-    <div id="pageLandingHome" className="bgColorLightTheme txtColorLightTheme">
-      <div id="homeBannerImage" className="bgFullWidthImage">
+    <div
+      id="pageLandingHome"
+      className="bgColorLightTheme txtColorLightTheme">
+      <div
+        id="homeBannerImage"
+        className="bgFullWidthImage">
         <HeaderHome />
 
         <div id="homeBannerText">
           <h1 className="txtColorDarkTheme">
-            Tailor-made software solutions for your growing business' needs.
+            Tailor-made software solutions for your growing business'
+            needs.
           </h1>
 
           <p className="txtColorDarkTheme">
             Robust, powerful, and fully-customizable application for every
-            department your company has, all in one place, available in mobile
-            and web.
+            department your company has, all in one place, available in
+            mobile and web.
           </p>
 
           <hr className="text-white" />
 
           <div id="homeActionButtons">
-            <a href="/Services" className="bgColorBrand txtColorDarkTheme btn">
+            <a
+              href="/Services"
+              className="bgColorBrand txtColorDarkTheme btn">
               Get Started
             </a>
 
-            <a href="/" className="bgColorBrand txtColorDarkTheme btn">
+            <a
+              href="/"
+              className="bgColorBrand txtColorDarkTheme btn">
               Why Choose ABC?
             </a>
 
-            <a href="/Pricing" className="txtColorDarkTheme btn border">
+            <a
+              href="/Pricing"
+              className="txtColorDarkTheme btn border">
               View Pricing Plans
             </a>
           </div>
@@ -62,6 +74,8 @@ const Home = () => {
           />
         );
       })}
+
+      <Partners />
 
       <div className="Ratings">
         <h2 className="text-center">What People Thinks About Us?</h2>
