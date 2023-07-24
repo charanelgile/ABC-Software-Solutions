@@ -2,15 +2,16 @@
 import React from "react";
 
 // Components ang Pages Imports
+import HeaderHome from "../components/HeaderHome";
 import HowItWorks from "../components/HowItWorks";
+import Partners from "../components/Partners";
 import Footer from "../components/Footer";
 
 // Miscellaneous Imports
-import { HowItWorks as HowItWorksData } from "../data/HowItWorks";
+import { HowItWorksData } from "../data/HowItWorksData";
+import RatingsCard from "../data/RatingsCard";
 import "../styles/styles.css";
 import "../styles/themes.css";
-import RatingsCard from "../data/RatingsCard";
-import HeaderPages from "../components/HeaderPages";
 
 const Home = () => {
   return (
@@ -20,8 +21,8 @@ const Home = () => {
       <div
         id="homeBannerImage"
         className="bgFullWidthImage">
-          <HeaderPages />
-        
+        <HeaderHome />
+
         <div id="homeBannerText">
           <h1 className="txtColorDarkTheme">
             Tailor-made software solutions for your growing business'
@@ -74,12 +75,17 @@ const Home = () => {
         );
       })}
 
-     <div className="Ratings">
-     <h2 className="text-center">What People Thinks About Us?</h2>
-      <div>
+      <Partners />
+
+      <div
+        id="divRatings"
+        className="mb-5">
+        <h5 className="txtColorLightTheme text-center mb-4">
+          What People Say About Us
+        </h5>
+
         <RatingsCard />
       </div>
-     </div>
 
       <Footer />
     </div>

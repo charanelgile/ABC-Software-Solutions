@@ -4,6 +4,7 @@ import React from "react";
 // Components ang Pages Imports
 import HeaderPages from "../components/HeaderPages";
 import BannerImage from "../components/BannerImage";
+import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 // Miscellaneous Imports
 import "../styles/styles.css";
@@ -26,6 +27,8 @@ const Services = () => {
 
    <ServiceContent />
  
+      
+      <Technologies />
 
       <Footer />
     </div>

@@ -10,7 +10,7 @@ function BannerImage(props) {
 
   return (
     <div
-      className="pageBannerImage bgFullWidthImage flexColCenter txtColorDarkTheme"
+      className="pageBannerImage bgFullWidthImage flexColCenter txtColorDarkTheme container-fluid"
       style={{
         backgroundImage: imageURL,
         backgroundPositionY: imageYaxis,

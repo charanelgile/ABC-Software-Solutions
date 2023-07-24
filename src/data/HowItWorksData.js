@@ -1,4 +1,4 @@
-export const HowItWorks = [
+export const HowItWorksData = [
   {
     howID: "1",
     howDivArrangement: "divHowItWorksOdd",

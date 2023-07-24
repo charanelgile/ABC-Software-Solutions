@@ -16,7 +16,7 @@ const Ratings = ({ rating, comment, imageSrc, authorName }) => {
   const emptyStars = 5 - filledStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Subtitle className="mb-2 text-warning">
@@ -25,13 +25,21 @@ const Ratings = ({ rating, comment, imageSrc, authorName }) => {
             ))}
             {hasHalfStar && <StarHalfIcon />}
             {Array.from({ length: emptyStars }, (_, index) => (
-              <StarBorderOutlinedIcon key={index} style={{ opacity: 0.5 }} />
+              <StarBorderOutlinedIcon
+                key={index}
+                style={{ opacity: 0.5 }}
+              />
             ))}
           </Card.Subtitle>
           <Card.Text>{comment}</Card.Text>
-          <Image src={imageSrc} roundedCircle width={30} height={30} />
+          <Image
+            src={imageSrc}
+            roundedCircle
+            width={40}
+            height={40}
+          />
           <span>
-            <strong>{authorName}</strong>
+            <strong className="ms-2">{authorName}</strong>
           </span>
         </Card.Body>
       </Card>

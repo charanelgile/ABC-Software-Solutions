@@ -51,8 +51,21 @@
   padding: 0.7rem 5rem !important;
 }
 
-.navCurrent {
-  border-bottom: 2px solid rgb(30, 175, 215);
+#navHome {
+  color: rgb(240, 240, 240) !important;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 3px solid rgb(240, 240, 240) !important;
+}
+
+/* Active Nav State Styling */
+.nav-link.active {
+  color: rgb(30, 175, 215) !important;
+  padding: 0.3rem 0.5rem !important;
+  border-bottom: 3px solid rgb(30, 175, 215) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(30, 175, 215);
 }
 
 /* Page Banner Image */
@@ -144,16 +157,96 @@
   padding-left: 3rem;
 }
 
+/* Trusted by our Partners */
+.divPartners {
+  height: 90px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/***** Services *****/
+/* Technologies We Use */
+#divTechnologies {
+  margin: 3rem 0;
+  padding: 0 15%;
+}
+
+#divTechnologies h3 {
+  margin-bottom: 30px;
+}
+
+.technologyLabels {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.technologyLabels h5 {
+  margin: 0 25px;
+}
+
+.technologyLabels hr {
+  width: 80%;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.technologyLogos {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /***** Who We Are *****/
-#divAboutTheTeam,
+.divWhoWeAre {
+  width: 100%;
+  padding: 1rem 10% !important;
+}
+
+#divAboutTheFounders,
 #divAboutTheCompany {
-  padding: 1rem 10%;
   text-align: justify;
-  /* background-color: slateblue; */
+}
+
+#divAboutTheFounders {
+  margin-top: 3rem;
 }
 
 #divAboutTheCompany {
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.divSellingPoints {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+}
+
+.divSellingPoints div {
+  width: 100%;
+  height: 175px;
+  margin: 15px 10px;
+  padding: 20px 40px 20px 25px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.75)
+  );
+  box-shadow: 3px 7px 10px rgba(150, 185, 200, 0.2);
+}
+
+.titleSellingPoint {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.textSellingPoint {
+  font-size: 110%;
 }
 
 #divProfileCards {
@@ -164,11 +257,73 @@
   width: 50px;
   font-size: 170%;
   text-align: center;
-  /* background-color: gold; */
 }
 
 .profileSocialLinks:hover {
-  color: rgb(45, 45, 50) !important;
+  color: rgb(65, 65, 70) !important;
+}
+
+.profilePortfolioLinks {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 110% !important;
+  padding: 10px 0 !important;
+}
+
+.profilePortfolioLinks:hover {
+  background-color: rgb(65, 65, 70) !important;
+}
+
+.divGivingBack {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+  background-size: cover;
+}
+
+.txtGivingBack {
+  font-size: 110%;
+}
+
+#imgGreenVille,
+#imgSustainable {
+  background-position-y: 60%;
+}
+
+#imgYOUth {
+  background-position-y: 70%;
+}
+
+.divEmployeeStory {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.75)
+  );
+  box-shadow: 3px 7px 10px rgba(150, 185, 200, 0.2);
+}
+
+.divEmployeeImage {
+  width: 150px;
+  height: 150px;
+  margin: 0 30px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.divEmployeeDetails {
+  width: 80%;
+  text-align: justify;
+}
+
+.aReadMore {
+  text-decoration: none;
 }
 
 /***** Footer *****/
@@ -189,10 +344,4 @@
 #ftrColumn2 a,
 #ftrColumn3 a {
   text-decoration: none;
-}
-
-.Ratings{
-    height: 400px;
-    width: 100%;
-    background-color: beige;
 }
