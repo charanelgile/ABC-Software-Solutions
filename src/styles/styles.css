@@ -70,7 +70,7 @@
 
 /* Page Banner Image */
 .pageBannerImage {
-  width: 100vw;
+  width: 100%;
   height: 275px;
 }
 
@@ -159,12 +159,14 @@
 
 /* Trusted by our Partners */
 .divPartners {
-  height: 90px;
+  height: 100px;
   padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
+
 
 /***** Services *****/
 /* Technologies We Use */
@@ -345,3 +347,105 @@
 #ftrColumn3 a {
   text-decoration: none;
 }
+
+
+/***** Responsive *****/
+
+/* hide element on small screen */
+@media only screen and (min-width: 480px) and (max-width: 1024px)
+{
+  #homeBannerImage {
+   width: 100%;
+   height: 100%;
+  }
+  .divHowItWorksImageOdd {
+   display: none;
+  }
+  #divHowItWorksEven{
+    display: inline-block;
+   
+    background-color: rgb(40, 180, 220);
+  
+  }
+  .divHowItWorksImageOdd {
+    padding-right: 0rem;
+  }
+  
+  .divHowItWorksImageEven {
+    padding-left: 0rem;
+  }
+  #homeBannerText {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  #homeBannerText p {
+    width: 100%;
+  }
+  
+  #homeBannerText hr {
+    width: 25%;
+  }
+  
+  #homeActionButtons {
+    margin: 1em 0;
+  }
+  .divHowItWorksDetails {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+  }
+  
+  
+}
+
+/* hide element on small screen */
+
+/* @media only screen and (max-width: 480px)
+{
+  #homeBannerImage {
+   width: 100%;
+  }
+  .divHowItWorksImageOdd {
+   display: none;
+  }
+  #divHowItWorksEven{
+    display: inline-block;
+   
+    background-color: rgb(40, 180, 220);
+  
+  }
+  .divHowItWorksImageOdd {
+    padding-right: 0rem;
+  }
+  
+  .divHowItWorksImageEven {
+    padding-left: 0rem;
+  }
+  #homeBannerText {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  #homeBannerText p {
+    width: 100%;
+  }
+  
+  #homeBannerText hr {
+    width: 25%;
+  }
+  
+  #homeActionButtons {
+    margin: 1em 0;
+  }
+  .divHowItWorksDetails {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+  }
+}
+ */
