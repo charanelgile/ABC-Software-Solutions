@@ -1,0 +1,95 @@
+#divTechnologies {
+  padding: 2rem 13%;
+  /* background-color: rgb(127, 127, 127); */
+}
+
+.technologyLabels p {
+  margin: 0 25px 0 0;
+}
+
+.technologyLabels hr {
+  width: 65%;
+  margin: 0;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.technologyLogos img {
+  margin: 15px 0;
+}
+
+.serviceTypeCards {
+  padding: 3% 10%;
+  align-items: flex-start !important;
+}
+
+.serviceTypeIcons {
+  width: 50px;
+  height: 50px;
+}
+
+.serviceTypeIcons p {
+  width: 50px;
+  font-size: 120%;
+  padding-top: 10px;
+}
+
+.serviceTypeLists {
+  width: 70%;
+}
+
+.serviceTypeLists p {
+  margin: 0;
+}
+
+#serviceTypeCategory {
+  font-size: 110%;
+  margin-bottom: 3px;
+}
+
+#subscriptionPlans {
+  padding: 2rem 10% 3rem;
+}
+
+.subscriptionPlanCards {
+  margin-bottom: 2rem;
+}
+
+.subscriptionPlanHeaders {
+  border-radius: 12px 12px 0 0 !important;
+  border: 1px solid rgba(240, 240, 240, 0.5);
+  border-bottom: none;
+}
+
+.subscriptionPlanDetails {
+  border-radius: 0 0 12px 12px;
+  border: 1px solid rgba(240, 240, 240, 0.5);
+  border-top: none;
+}
+
+.subscriptionPlanPrice {
+  font-size: 250%;
+}
+
+#subscriptionPlanInclusions,
+#subscriptionPlanFeatures {
+  font-size: 120%;
+}
+
+#subscriptionPlanFeatures {
+  margin-top: 1rem;
+}
+
+.subscriptionPlanInclusionsFeatures p {
+  margin: 0;
+  text-align: left;
+}
+
+.subscriptionPlanInclusionsFeatures ul li {
+  text-align: left;
+  background: transparent !important;
+}
+
+.btnCustomPackage {
+  width: 100%;
+  padding: 10px 15px;
+}

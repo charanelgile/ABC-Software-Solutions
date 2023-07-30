@@ -1,0 +1,21 @@
+.ftrSocialLinks {
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.ftrColumnLinks {
+  padding: 2rem;
+}
+
+#ftrColumn1 {
+  padding: 0 10%;
+}
+
+#ftrColumn2 a,
+#ftrColumn3 a {
+  text-decoration: none;
+}
+
+#ftrColumn4 h6 + p {
+  padding: 0 8.5%;
+}

@@ -1,0 +1,47 @@
+.navHeaders {
+  height: 70px;
+  margin: 0 !important;
+}
+
+#logo {
+  padding-left: 0.5rem;
+}
+
+#navBurger {
+  margin-right: 0.35rem;
+  filter: invert(100%);
+}
+
+#logoOffCanvas {
+  padding-left: 0.75rem;
+}
+
+.divNavMenu {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+.divNavMenu p {
+  margin: 5px 0.75rem;
+}
+
+#divNavButtonsLoggedIN {
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.navButtons {
+  width: 50px;
+  padding: 11px 0;
+}
+
+#navButtonEditUser {
+  margin: 0 1rem;
+}
+
+#navButtonLogin {
+  width: 100px;
+  padding: 11px 0;
+  margin-left: 1rem;
+}
