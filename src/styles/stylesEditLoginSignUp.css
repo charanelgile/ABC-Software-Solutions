@@ -1,0 +1,76 @@
+#frmUserEditAccount,
+#frmAdminEditAccount {
+  padding: 2rem 3rem;
+}
+
+#frmUserEditAccount input::placeholder,
+#frmAdminEditAccount input::placeholder {
+  color: rgb(240, 240, 240) !important;
+  opacity: 40% !important;
+}
+
+#frmUserEditAccount .btn,
+#frmAdminEditAccount .btn {
+  width: 45%;
+  margin-top: 0.75rem;
+}
+
+#frmUserLogin input,
+#frmUserSignUp input,
+#frmUserEditAccount input,
+#frmAdminLogin input,
+#frmAdminSignUp input,
+#frmAdminEditAccount input {
+  margin: 5px 0 1.2rem;
+  color: rgb(240, 240, 240);
+  background-color: rgb(40, 40, 55);
+  border: 1px solid rgba(240, 240, 240, 0.5);
+}
+
+#divUserLogin,
+#divUserSignUp,
+#divAdminLogin,
+#divAdminSignUp {
+  padding: 2rem;
+}
+
+#frmUserLogin,
+#frmUserSignUp,
+#frmAdminLogin,
+#frmAdminSignUp {
+  padding: 1.75rem 2rem;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid rgba(240, 240, 240, 0.25);
+  border-bottom: none;
+}
+
+#frmUserLogin input,
+#frmUserSignUp input,
+#frmAdminLogin input,
+#frmAdminSignUp input {
+  background-color: rgb(25, 25, 40);
+  border: 1px solid rgba(240, 240, 240, 0.25);
+}
+
+.suggestLoginOrSignUp {
+  margin-bottom: 3rem;
+  padding: 0 2rem 2rem;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(240, 240, 240, 0.25);
+  border-top: none;
+  align-items: baseline !important;
+}
+
+.btnLogin {
+  padding: 0 2px;
+  border-bottom: 1px solid rgb(25, 205, 205);
+}
+
+.btnSignUp {
+  padding: 0 2px;
+  border-bottom: 1px solid rgb(255, 165, 45);
+}
+
+.btnSignUp:hover {
+  opacity: 100% !important;
+}

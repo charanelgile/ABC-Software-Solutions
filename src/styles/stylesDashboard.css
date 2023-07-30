@@ -1,0 +1,18 @@
+#btnDashboardNavBurger {
+  font-size: 110%;
+  margin: 0 0.4rem;
+}
+
+.sidePanelIcons {
+  margin: 0 0 0 0.1rem;
+  font-size: 125%;
+}
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-color: rgb(40, 40, 55) !important;
+}
+
+#boxDashboard {
+  width: 85%;
+  background-color: cadetblue;
+}

@@ -1,7 +1,20 @@
+// Library Imports
 import React, { useContext, useRef } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+
+// Component Imports
+import UserHeader from "./UserHeader";
 import UserLogin from "./UserLogin";
+import UserSignUp from "./UserSignUp";
+
+// Context Imports
 import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
+
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const UserEditAccount = () => {
   const { allUsers, setAllUsers } = useContext(AllUsersContext);
@@ -54,7 +67,7 @@ const UserEditAccount = () => {
 
     setAllUsers(retainedUsers);
 
-    // Update the stored Current User with their new details
+    // Update the stored Current User with his/her new details
     setCurrentUser([...matchingUserAccount]);
 
     // Update the stored List of All Users, adding the new details of the Current User
@@ -69,20 +82,29 @@ const UserEditAccount = () => {
     userPasswordRef.current.value = null;
   };
 
-  return allUsers.length === 0 && currentUser.length === 0 ? (
+  return allUsers.length === 0 ? (
+    <UserSignUp />
+  ) : currentUser.length === 0 ? (
     <UserLogin />
   ) : (
     <div>
-      <h1>User Edit Account</h1>
+      <UserHeader />
 
-      <form onSubmit={handleSaveEdits}>
+      <form
+        id="frmUserEditAccount"
+        onSubmit={handleSaveEdits}>
+        <h5 className="text-light text-center mb-4 px-5 opacity-50">
+          Edit your account details
+        </h5>
+
         <label htmlFor="userFirstName">First Name:</label>
         <input
           id="userFirstName"
           name="userFirstName"
           type="text"
           required
-          className="form-control"
+          placeholder="Enter updated First Name"
+          className="form-control shadow-none"
           ref={userFirstNameRef}
         />
 
@@ -92,7 +114,8 @@ const UserEditAccount = () => {
           name="userLastName"
           type="text"
           required
-          className="form-control"
+          placeholder="Enter updated Last Name"
+          className="form-control shadow-none"
           ref={userLastNameRef}
         />
 
@@ -102,30 +125,43 @@ const UserEditAccount = () => {
           name="userEmail"
           type="email"
           required
-          className="form-control"
+          placeholder="Enter updated Email Address"
+          className="form-control shadow-none"
           ref={userEmailRef}
         />
 
-        <p className="text-danger">
-          For verification purposes, please enter your password.
-        </p>
+        <label
+          htmlFor="userPassword"
+          className="text-secondary">
+          For verification purposes, please enter your password below.
+        </label>
 
         <input
           id="userPassword"
           name="userPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           placeholder="Enter your password for verification"
           ref={userPasswordRef}
         />
 
-        <button
-          id="btnSave"
-          type="submit"
-          className="btn btn-info w-25">
-          Save
-        </button>
+        <div className="flexRowBetween">
+          <button
+            id="btnSave"
+            type="submit"
+            className="bg-primary text-light btn py-2">
+            <FontAwesomeIcon icon={faCheck} />
+            &nbsp;&nbsp;Save
+          </button>
+
+          <Link
+            to="/"
+            className="bg-tertiary text-light btn py-2">
+            <FontAwesomeIcon icon={faXmark} />
+            &nbsp;&nbsp;Cancel
+          </Link>
+        </div>
       </form>
     </div>
   );

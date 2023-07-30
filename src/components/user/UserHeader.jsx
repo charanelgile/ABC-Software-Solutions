@@ -31,7 +31,7 @@ const UserHeader = () => {
   };
 
   return (
-    <div>
+    <div id="divNavHeader">
       {["md"].map((expand) => (
         <Navbar
           key={expand}
@@ -93,7 +93,7 @@ const UserHeader = () => {
                     className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faPaperPlane} />
-                      <p>Contact</p>
+                      <p>Contact Us</p>
                     </div>
                   </Nav.Link>
 

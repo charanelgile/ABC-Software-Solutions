@@ -1,0 +1,56 @@
+#divSearchFAQs {
+  padding: 3rem;
+}
+
+#btnSearchFAQs {
+  padding: 10px 5px 10px 15px;
+  border-radius: 25px 0 0 25px;
+}
+
+#divSearchFAQs input {
+  padding: 10px 0 10px;
+  border: 1px solid white;
+  border-radius: 0 25px 25px 0;
+}
+
+#emailUs,
+#visitUs {
+  padding: 2rem 3rem;
+}
+
+#divContactForm input,
+#divContactForm select,
+#divContactForm textarea {
+  color: rgb(240, 240, 240);
+  background-color: rgb(40, 40, 55);
+  border: 1px solid rgba(240, 240, 240, 0.5);
+}
+
+#divContactForm input::placeholder,
+#divContactForm textarea::placeholder {
+  color: rgb(240, 240, 240) !important;
+  opacity: 40% !important;
+}
+
+#divContactForm input,
+#divContactForm select,
+#divContactForm textarea {
+  margin: 5px 0 1.2rem;
+}
+
+#divContactForm textarea {
+  resize: none;
+  height: 175 !important;
+}
+
+#contactSubmit {
+  border: 1px solid rgba(240, 240, 240, 0.5);
+}
+
+#iframeMap {
+  border-radius: 8px;
+}
+
+#companyContactDetails p {
+  margin: 7px 0;
+}

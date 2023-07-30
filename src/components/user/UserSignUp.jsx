@@ -1,9 +1,16 @@
+// Library Imports
 import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+
+// Component Imports
+import Home from "../../pages/user/Home";
+
+// Context Imports
 import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
 
-import Home from "../../pages/user/Home";
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const UserSignUp = () => {
   const userFirstNameRef = useRef(null);
@@ -89,15 +96,22 @@ const UserSignUp = () => {
   return allUsers.length > 0 && currentUser.length > 0 ? (
     <Home />
   ) : (
-    <div>
-      <form onSubmit={handleUserSignUp}>
+    <div id="divUserSignUp">
+      <h5 className="text-light text-center mb-4 opacity-75">
+        Create an account
+      </h5>
+
+      <form
+        id="frmUserSignUp"
+        className="bg-dark-midtone"
+        onSubmit={handleUserSignUp}>
         <label htmlFor="userFirstName">First Name:</label>
         <input
           id="userFirstName"
           name="userFirstName"
           type="text"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userFirstNameRef}
         />
 
@@ -107,7 +121,7 @@ const UserSignUp = () => {
           name="userLastName"
           type="text"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userLastNameRef}
         />
 
@@ -117,7 +131,7 @@ const UserSignUp = () => {
           name="userEmail"
           type="email"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userEmailRef}
         />
 
@@ -127,7 +141,7 @@ const UserSignUp = () => {
           name="userPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userPasswordRef}
         />
 
@@ -137,25 +151,47 @@ const UserSignUp = () => {
           name="userConfirmPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userConfirmPasswordRef}
         />
 
         <button
-          id="userSignUp"
+          id="btnUserSignUp"
           type="submit"
-          className="btn btn-success w-25">
+          className="bg-primary text-light btn w-100">
           Sign Up
         </button>
       </form>
 
-      <p className="m-0">Already have an account?</p>
+      <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
+        <p className="opacity-50">Already have an account?&nbsp;&nbsp;</p>
 
-      <Link
-        to="/UserLogin"
-        className="btn btn-primary w-25">
-        Login
-      </Link>
+        <Link
+          to="/UserLogin"
+          className="btnLogin text-info text-decoration-none opacity-75">
+          Login
+        </Link>
+      </div>
+
+      <div className="extraLinks flexRowAround">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Terms of Use</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Privacy Policy</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-light text-decoration-none opacity-50">
+          <small>Contact Support</small>
+        </a>
+      </div>
     </div>
   );
 };

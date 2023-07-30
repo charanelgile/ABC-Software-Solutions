@@ -160,7 +160,7 @@ const SubscriptionPlans = () => {
         })}
       </div>
 
-      <Button className="btnCustomPackage bg-secondary fw-bold border-0">
+      <Button className="btnCustomPackage bg-secondary text-dark-midtone fw-bold border-0">
         Customize your Subscription Package
       </Button>
     </div>
