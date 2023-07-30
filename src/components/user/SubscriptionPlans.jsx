@@ -10,12 +10,12 @@ import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
 
 // Others
 import {
-  yyyy,
-  mm,
-  dd,
+  year,
+  month,
+  date,
   hrs,
   mins,
-  flagAMorPM,
+  eitherAMorPM,
 } from "../../data/DateTimeData";
 import { SubscriptionPlansData } from "../../data/SubscriptionPlansData";
 
@@ -40,7 +40,7 @@ const SubscriptionPlans = () => {
     chosenSubscriptionPlan[0].subscrptnPlanID = Date.now();
 
     // Add a Start Date
-    chosenSubscriptionPlan[0].subscrptnPlanStart = `${mm}-${dd}-${yyyy}, ${hrs}:${mins} ${flagAMorPM}`;
+    chosenSubscriptionPlan[0].subscrptnPlanStart = `${month}-${date}-${year}, ${hrs}:${mins} ${eitherAMorPM}`;
 
     // Add a Recurring or Not Flag
     chosenSubscriptionPlan[0].subscrptnPlanDuration > 0

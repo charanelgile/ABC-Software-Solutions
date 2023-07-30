@@ -93,3 +93,72 @@
   width: 100%;
   padding: 10px 15px;
 }
+
+/* #subscriptionConfirmation {
+  height: 100vh;
+} */
+
+/* #subscriptionConfirmationTop {
+  height: 20%;
+  overflow: hidden;
+} */
+
+#subscriptionConfirmationBottom {
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+#divCancelSubscription {
+  padding: 10px 20px 0;
+}
+
+.btnCancelSubscription {
+  font-size: 150%;
+  position: absolute;
+}
+
+#divAlmostThere {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  border-radius: 15px 15px 0 0;
+  border: 1px solid rgba(240, 240, 240, 0.35);
+  border-bottom: none;
+}
+
+#almostThereIcon {
+  opacity: 50%;
+  font-size: 4rem;
+}
+
+#subscriptionConfirmationDetails {
+  width: 80%;
+  padding: 0 7%;
+  margin: 0 auto 2rem;
+  border-radius: 0 0 15px 15px;
+  border: 1px solid rgba(240, 240, 240, 0.35);
+  border-top: none;
+}
+
+#subscriptionConfirmationDetails p {
+  margin: 0;
+}
+
+.inclusionsList,
+.featuresList {
+  margin-left: 1rem !important;
+}
+
+.inclusionsItems {
+  margin-left: 2rem !important;
+}
+
+#btnConfirmSubscription {
+  margin: 2rem 0 0;
+  width: 200px;
+}
+
+#btnCancelSubscription {
+  margin: 1rem 0 2rem;
+  width: 200px;
+}
