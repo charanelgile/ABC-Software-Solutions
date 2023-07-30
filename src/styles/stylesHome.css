@@ -1,0 +1,80 @@
+#homeBannerImage {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1634908800785-d3df980d179e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHdvbWFuJTIwaW4lMjBjYWZlJTIwd2l0aCUyMGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
+  background-position-x: 60%;
+}
+
+#homeBannerText {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 37%;
+}
+
+#homeBannerText p {
+  width: 95%;
+  padding: 0.2rem 0 1.5rem;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.5);
+}
+
+#div5EasySteps {
+  padding: 1rem 15%;
+}
+
+.doubleArrowDown {
+  opacity: 75%;
+}
+
+.divFiveStepSolution {
+  padding-bottom: 7.5%;
+}
+
+.divFiveStepSolutionDetails {
+  padding: 7.5% 7.5% 5%;
+}
+
+.divFiveStepSolutionDetails a {
+  text-decoration: none;
+}
+
+.divPartners {
+  /* margin: 2rem 0; */
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.divPartners img {
+  margin: 0.75rem;
+}
+
+#testimonialsHeading {
+  padding-top: 2rem;
+}
+
+.testimonialsServiceAuthor {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 10px solid rgb(25, 25, 40);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 35px;
+}
+
+.testimonialsServiceAuthorName {
+  font-size: 120%;
+}
+
+.testimonialsServiceDetails {
+  width: 65%;
+  padding: 35px 30px 25px;
+}
