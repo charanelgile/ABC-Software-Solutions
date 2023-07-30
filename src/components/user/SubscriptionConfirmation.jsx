@@ -119,20 +119,18 @@ const SubscriptionConfirmation = () => {
                   : plan.subscrptnPlanDuration + " months"}
               </p>
 
-              <p className="mb-2">
+              <p>
                 <b>Recurring: </b>
                 {plan.subscrptnPlanRecurring ? "Yes" : "No"}
               </p>
 
-              <p>
+              <p className="mt-3 mb-2">
                 <b>Inclusions:</b>
               </p>
 
               {plan.subscrptnPlanInclusions.map((inclusion, index) => {
                 return (
                   <p key={index + 1}>
-                    <hr />
-
                     <b className="inclusionsList opacity-75">
                       {inclusion.spiServiceType}
                     </b>
@@ -146,6 +144,8 @@ const SubscriptionConfirmation = () => {
                         </p>
                       );
                     })}
+
+                    <hr />
                   </p>
                 );
               })}
