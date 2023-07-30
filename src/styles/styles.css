@@ -157,5 +157,6 @@ body {
 }
 
 .bannerImage {
+  height: 150px;
   padding: 1rem 3.5rem;
 }
