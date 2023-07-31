@@ -42,7 +42,7 @@ const AdminHeader = () => {
           <Container fluid>
             <Navbar.Brand
               id="logo"
-              href="/Dashboard"
+              href="/DashboardOverview"
               className="text-light">
               ABC Software Solutions
             </Navbar.Brand>
@@ -62,7 +62,7 @@ const AdminHeader = () => {
                 <Offcanvas.Title
                   id={`offcanvasNavbarLabel-expand-${expand}`}>
                   <Navbar.Brand
-                    href="/Dashboard"
+                    href="/DashboardOverview"
                     id="logoOffCanvas"
                     className="text-light fw-bold">
                     ABC Software Solutions

@@ -17,26 +17,28 @@ const DisplaySubscriptions = () => {
           <Card
             key={index + 1}
             className="subscriptionCards text-light">
-            <Card.Body>
-              <small>
-                <span className="opacity-75">Subscription Plan ID: </span>
-                <b>{plan.subscrptnPlanID}</b>
-              </small>
-
-              <Card.Title className="subscriptionPlanNames text-primary fw-bold">
-                {plan.subscrptnPlanName}
-              </Card.Title>
-
-              <Card.Subtitle className="text-primary mb-3">
-                {plan.subscrptnPlanAmount === 0
-                  ? "One Time"
-                  : plan.subscrptnPlanAmount.toLocaleString() +
-                    "/mo for " +
-                    plan.subscrptnPlanDuration +
-                    " months"}
-              </Card.Subtitle>
-
+            <Card.Body className="flexColStart">
               <div>
+                <small>
+                  <span className="opacity-75">
+                    Subscription Plan ID:{" "}
+                  </span>
+                  <b>{plan.subscrptnPlanID}</b>
+                </small>
+
+                <Card.Title className="subscriptionPlanNames text-primary fw-bold">
+                  {plan.subscrptnPlanName}
+                </Card.Title>
+
+                <Card.Subtitle className="text-primary mb-3">
+                  {plan.subscrptnPlanAmount === 0
+                    ? "One Time"
+                    : plan.subscrptnPlanAmount.toLocaleString() +
+                      "/mo for " +
+                      plan.subscrptnPlanDuration +
+                      " months"}
+                </Card.Subtitle>
+
                 <p>
                   <span className="opacity-75">Subscriber: </span>
                   <b>{plan.subscrptnPlanSubscriber}</b>
@@ -46,7 +48,9 @@ const DisplaySubscriptions = () => {
                   <span className="opacity-75">Started on: </span>
                   {plan.subscrptnPlanStart}
                 </p>
+              </div>
 
+              <div>
                 <div>
                   <p className="mt-2 opacity-75">
                     {plan.subscrptnPlanFeatures.length === 0

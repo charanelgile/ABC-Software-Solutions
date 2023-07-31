@@ -153,7 +153,7 @@ const AdminEditAccount = () => {
           </button>
 
           <Link
-            to="/Dashboard"
+            to="/DashboardOverview"
             className="bg-tertiary text-light btn py-2">
             <FontAwesomeIcon icon={faXmark} />
             &nbsp;&nbsp;Cancel

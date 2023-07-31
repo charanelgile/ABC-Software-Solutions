@@ -3,7 +3,7 @@ import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // Component Imports
-import Dashboard from "../../pages/admin/Dashboard";
+import DashboardOverview from "../../pages/admin/DashboardOverview";
 
 // Context Imports
 import { AllAdminsContext } from "../../contexts/admin/AllAdminsContext";
@@ -84,7 +84,7 @@ const AdminLogin = () => {
   };
 
   return allAdmins.length > 0 && currentAdmin.length > 0 ? (
-    <Dashboard />
+    <DashboardOverview />
   ) : (
     <div id="divAdminLogin">
       <h5 className="text-light text-center mb-4 opacity-75">

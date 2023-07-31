@@ -44,8 +44,6 @@ const CompletedContactForms = () => {
 
   return contactFormsCompleted.length === 0 ? null : (
     <div>
-      <h3 className="mt-5 mb-3 opacity-75">Completed Forms:</h3>
-
       <TableContainer className="rounded">
         <Table>
           <TableHead className="bg-dark-midtone">

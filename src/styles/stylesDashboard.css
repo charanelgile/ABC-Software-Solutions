@@ -16,6 +16,14 @@
   width: 100%;
 }
 
+#loggedAdmin {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  line-height: 1.35;
+  border: 1px solid rgba(240, 240, 240, 0.35);
+}
+
 .contactFormButtons {
   margin: 0;
   font-size: 135%;
