@@ -1,4 +1,10 @@
+// Library Imports
 import React, { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSquareCheck,
+  faTrashCan,
+} from "@fortawesome/free-regular-svg-icons";
 import {
   TableContainer,
   Table,
@@ -7,7 +13,8 @@ import {
   TableRow,
   TableCell,
 } from "@mui/material";
-import { CheckSquare, Trash } from "react-bootstrap-icons";
+
+// Context Imports
 import { ContactFormsSubmittedContext } from "../../contexts/admin/ContactFormsSubmittedContext";
 import { ContactFormsCompletedContext } from "../../contexts/admin/ContactFormsCompletedContext";
 
@@ -46,6 +53,8 @@ const DisplayContactForms = () => {
 
   // Delete a Form
   const handleDelete = (contactID) => {
+    alert("Are you sure you want to delete this entry?");
+
     // Return the Forms that are NOT for Deletion
     const retainedForms = contactFormsSubmitted.filter((form) => {
       return form.contactID !== contactID;
@@ -57,75 +66,114 @@ const DisplayContactForms = () => {
 
   return contactFormsSubmitted.length === 0 ? null : (
     <div>
-      <h5>Submitted Forms:</h5>
-      <TableContainer>
+      <h3 className="mt-5 mb-3 opacity-75">Submitted Forms:</h3>
+
+      <TableContainer className="rounded">
         <Table>
-          <TableHead className="bg-primary">
+          <TableHead className="bg-dark-midtone">
             <TableRow>
-              <TableCell>Request ID</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Request ID
+              </TableCell>
 
-              <TableCell>Requestor's Name</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Requestor's Name
+              </TableCell>
 
-              <TableCell>Name of Business</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Name of Business
+              </TableCell>
 
-              <TableCell>Email</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Service Request Type
+              </TableCell>
 
-              <TableCell>Phone</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Message
+              </TableCell>
 
-              <TableCell>Service Request Type</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Date Submitted
+              </TableCell>
 
-              <TableCell>Message</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Email
+              </TableCell>
 
-              <TableCell>Date Submitted</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Phone
+              </TableCell>
 
-              <TableCell>Mark as Complete</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Mark as Complete
+              </TableCell>
 
-              <TableCell>Delete</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Delete
+              </TableCell>
             </TableRow>
           </TableHead>
 
-          <TableBody>
+          <TableBody className="contactFormDetails">
             {contactFormsSubmitted.map((form, index) => (
               <TableRow key={index + 1}>
-                <TableCell>{form.contactID}</TableCell>
+                <TableCell className="text-info text-center fw-bold">
+                  {form.contactID}
+                </TableCell>
 
-                <TableCell>
+                <TableCell className="text-light fw-bold">
                   {form.contactFirstName} {form.contactLastName}
                 </TableCell>
 
-                <TableCell>{form.contactBusinessName}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactBusinessName}
+                </TableCell>
 
-                <TableCell>{form.contactEmail}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactServiceType}
+                </TableCell>
 
-                <TableCell>{form.contactPhone}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactMessage}
+                </TableCell>
 
-                <TableCell>{form.contactServiceType}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactDateSubmitted}
+                </TableCell>
 
-                <TableCell>{form.contactMessage}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactEmail}
+                </TableCell>
 
-                <TableCell>{form.contactDateSubmitted}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactPhone}
+                </TableCell>
 
-                <TableCell>
+                <TableCell className="text-light text-center fw-bold">
                   <button
-                    className="btn btn-primary"
+                    className="bg-primary text-light btn"
                     onClick={(event) => {
                       event.preventDefault();
 
                       handleComplete(form.contactID);
                     }}>
-                    <CheckSquare />
+                    <p className="contactFormButtons">
+                      <FontAwesomeIcon icon={faSquareCheck} />
+                    </p>
                   </button>
                 </TableCell>
 
-                <TableCell>
+                <TableCell className="text-light text-center fw-bold">
                   <button
-                    className="btn btn-danger"
+                    className="bg-tertiary text-light btn"
                     onClick={(event) => {
                       event.preventDefault();
 
                       handleDelete(form.contactID);
                     }}>
-                    <Trash />
+                    <p className="contactFormButtons">
+                      <FontAwesomeIcon icon={faTrashCan} />
+                    </p>
                   </button>
                 </TableCell>
               </TableRow>

@@ -1,4 +1,7 @@
+// Library Imports
 import React, { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   TableContainer,
   Table,
@@ -7,7 +10,8 @@ import {
   TableRow,
   TableCell,
 } from "@mui/material";
-import RestoreIcon from "@mui/icons-material/Restore";
+
+// Context Imports
 import { ContactFormsSubmittedContext } from "../../contexts/admin/ContactFormsSubmittedContext";
 import { ContactFormsCompletedContext } from "../../contexts/admin/ContactFormsCompletedContext";
 
@@ -40,61 +44,94 @@ const CompletedContactForms = () => {
 
   return contactFormsCompleted.length === 0 ? null : (
     <div>
-      <h5>Completed Forms:</h5>
-      <TableContainer>
+      <h3 className="mt-5 mb-3 opacity-75">Completed Forms:</h3>
+
+      <TableContainer className="rounded">
         <Table>
-          <TableHead className="bg-secondary">
+          <TableHead className="bg-dark-midtone">
             <TableRow>
-              <TableCell>Request ID</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Request ID
+              </TableCell>
 
-              <TableCell>Requestor's Name</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Requestor's Name
+              </TableCell>
 
-              <TableCell>Name of Business</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Name of Business
+              </TableCell>
 
-              <TableCell>Email</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Service Request Type
+              </TableCell>
 
-              <TableCell>Phone</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Message
+              </TableCell>
 
-              <TableCell>Service Request Type</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Date Submitted
+              </TableCell>
 
-              <TableCell>Message</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Email
+              </TableCell>
 
-              <TableCell>Date Submitted</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Phone
+              </TableCell>
 
-              <TableCell>Restore</TableCell>
+              <TableCell className="text-light text-center fw-bold">
+                Restore
+              </TableCell>
             </TableRow>
           </TableHead>
 
-          <TableBody>
+          <TableBody className="contactFormDetails">
             {contactFormsCompleted.map((form, index) => (
               <TableRow key={index + 1}>
-                <TableCell>{form.contactID}</TableCell>
+                <TableCell className="text-info text-center fw-bold">
+                  {form.contactID}
+                </TableCell>
 
-                <TableCell>
+                <TableCell className="text-light fw-bold">
                   {form.contactFirstName} {form.contactLastName}
                 </TableCell>
 
-                <TableCell>{form.contactBusinessName}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactBusinessName}
+                </TableCell>
 
-                <TableCell>{form.contactEmail}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactServiceType}
+                </TableCell>
 
-                <TableCell>{form.contactPhone}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactMessage}
+                </TableCell>
 
-                <TableCell>{form.contactServiceType}</TableCell>
+                <TableCell className="text-light fw-bold">
+                  {form.contactDateSubmitted}
+                </TableCell>
 
-                <TableCell>{form.contactMessage}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactEmail}
+                </TableCell>
 
-                <TableCell>{form.contactDateSubmitted}</TableCell>
+                <TableCell className="text-light text-center fw-bold">
+                  {form.contactPhone}
+                </TableCell>
 
-                <TableCell>
+                <TableCell className="text-light text-center fw-bold">
                   <button
-                    className="btn btn-warning"
+                    className="bg-secondary text-dark btn"
                     onClick={(event) => {
                       event.preventDefault();
 
                       handleRestore(form.contactID);
                     }}>
-                    <RestoreIcon />
+                    <FontAwesomeIcon icon={faArrowRotateLeft} />
                   </button>
                 </TableCell>
               </TableRow>

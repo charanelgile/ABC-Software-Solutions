@@ -25,12 +25,12 @@ import {
 import {
   faFolderClosed,
   faUser,
+  faEnvelope,
 } from "@fortawesome/free-regular-svg-icons";
 
 // Component Imports
 import AdminLogin from "../../components/admin/AdminLogin";
 import AdminSignUp from "../../components/admin/AdminSignUp";
-import AdminHeader from "../../components/admin/AdminHeader";
 import DisplaySubscriptions from "../../components/admin/DisplaySubscriptions";
 import DisplayContactForms from "../../components/admin/DisplayContactForms";
 import CompletedContactForms from "../../components/admin/CompletedContactForms";
@@ -41,6 +41,7 @@ import { CurrentAdminContext } from "../../contexts/admin/CurrentAdminContext";
 
 // Others
 import "../../styles/stylesDashboard.css";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -124,7 +125,15 @@ const Dashboard = () => {
   // -----------------------------------------------
 
   const { allAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin } = useContext(CurrentAdminContext);
+  const { currentAdmin, setCurrentAdmin } = useContext(
+    CurrentAdminContext
+  );
+
+  const handleAdminLogout = () => {
+    setCurrentAdmin([]);
+
+    window.location.reload();
+  };
 
   return (
     <div>
@@ -134,8 +143,6 @@ const Dashboard = () => {
         <AdminLogin />
       ) : (
         <div className="bg-dark text-light">
-          {/* <AdminHeader /> */}
-
           <Box sx={{ display: "flex" }}>
             {/* <CssBaseline /> */}
             <AppBar
@@ -261,12 +268,17 @@ const Dashboard = () => {
                             </p>
                           ) : index === 1 ? (
                             <p className="sidePanelIcons text-primary">
-                              <FontAwesomeIcon icon={faUser} />
+                              <Link
+                                to="/AdminEditAccount"
+                                className="text-primary">
+                                <FontAwesomeIcon icon={faUser} />
+                              </Link>
                             </p>
                           ) : (
                             <p className="sidePanelIcons text-primary">
                               <FontAwesomeIcon
                                 icon={faArrowRightToBracket}
+                                onClick={handleAdminLogout}
                               />
                             </p>
                           )}
@@ -290,44 +302,29 @@ const Dashboard = () => {
               className="text-light">
               <DrawerHeader />
 
+              <p className="m-0 text-end">
+                {currentAdmin[0].adminFirstName}{" "}
+                {currentAdmin[0].adminLastName}
+                <span className="opacity-75 fw-bold">
+                  &nbsp;&nbsp;&nbsp;
+                  <FontAwesomeIcon icon={faUser} />
+                </span>
+                <br />
+                {currentAdmin[0].adminEmail}
+                <span className="opacity-75 fw-bold">
+                  &nbsp;&nbsp;&nbsp;
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
+              </p>
+
+              <h3 className="mb-3 opacity-75">Subscriptions</h3>
+              <div id="divSubscriptions">
+                <DisplaySubscriptions />
+              </div>
+
               <DisplayContactForms />
 
               <CompletedContactForms />
-
-              <DisplaySubscriptions />
-              {/* <Typography paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Rhoncus dolor purus non enim praesent elementum
-                facilisis leo vel. Risus at ultrices mi tempus imperdiet.
-                Semper risus in hendrerit gravida rutrum quisque non
-                tellus. Convallis convallis tellus id interdum velit
-                laoreet id donec ultrices. Odio morbi quis commodo odio
-                aenean sed adipiscing. Amet nisl suscipit adipiscing
-                bibendum est ultricies integer quis. Cursus euismod quis
-                viverra nibh cras. Metus vulputate eu scelerisque felis
-                imperdiet proin fermentum leo. Mauris commodo quis
-                imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-                vivamus at augue. At augue eget arcu dictum varius duis at
-                consectetur lorem. Velit sed ullamcorper morbi tincidunt.
-                Lorem donec massa sapien faucibus et molestie ac.
-              </Typography>
-              <Typography paragraph>
-                Consequat mauris nunc congue nisi vitae suscipit. Fringilla
-                est ullamcorper eget nulla facilisi etiam dignissim diam.
-                Pulvinar elementum integer enim neque volutpat ac
-                tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                tellus. Purus sit amet volutpat consequat mauris. Elementum
-                eu facilisis sed odio morbi. Euismod lacinia at quis risus
-                sed vulputate odio. Morbi tincidunt ornare massa eget
-                egestas purus viverra accumsan in. In hendrerit gravida
-                rutrum quisque non tellus orci ac. Pellentesque nec nam
-                aliquam sem et tortor. Habitant morbi tristique senectus
-                et. Adipiscing elit duis tristique sollicitudin nibh sit.
-                Ornare aenean euismod elementum nisi quis eleifend. Commodo
-                viverra maecenas accumsan lacus vel facilisis. Nulla
-                posuere sollicitudin aliquam ultrices sagittis orci a.
-              </Typography> */}
             </Box>
           </Box>
         </div>
