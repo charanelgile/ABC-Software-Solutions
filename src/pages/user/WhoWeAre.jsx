@@ -6,6 +6,8 @@ import UserHeader from "../../components/user/UserHeader";
 import BannerImage from "../../components/user/BannerImage";
 import CompanyPerformance from "../../components/user/CompanyPerformance";
 import FoundersProfiles from "../../components/user/FoundersProfiles";
+import GivingBack from "../../components/user/GivingBack";
+import LifeAtABC from "../../components/user/LifeAtABC";
 import Footer from "../../components/user/Footer";
 
 // Others
@@ -97,7 +99,41 @@ const WhoWeAre = () => {
         })}
       </div>
 
-      <div className="bg-dark">&nbsp;</div>
+      <div
+        id="givingBack"
+        className="bg-dark">
+        <h5 className="text-center my-3 px-5 opacity-50">
+          Giving Back to the Community
+        </h5>
+
+        <GivingBack
+          image1='linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1556762163-542910c8765d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA3fHxmYXJtZXJzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+          image2='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQwfHxraWRzJTIwY29kaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+          image3='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1628191011227-522c7c3f0af9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHBhY2tlZCUyMGx1bmNofGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
+        />
+      </div>
+
+      <div
+        id="lifeAtABC"
+        className="divWhoWeAre bg-dark-midtone">
+        <h5 className="text-center my-3 px-5 opacity-50">Life at ABC</h5>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;Hear our employees' stories about how the
+          company has helped them achieve their goals and succeed in life
+          all while being a part of our diverse, talented, and passionate
+          team so you can see for yourself what makes{" "}
+          <span className="text-secondary">#LifeAtABC</span> amazing and
+          rewarding, at the same time.
+        </p>
+
+        <LifeAtABC />
+      </div>
+
+      <div className="bg-dark-midtone">&nbsp;</div>
 
       <Footer />
     </div>

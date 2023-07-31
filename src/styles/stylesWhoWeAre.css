@@ -1,5 +1,6 @@
 #divAboutTheFounders,
-#divAboutTheCompany {
+#divAboutTheCompany,
+#lifeAtABC {
   text-align: justify;
 }
 
@@ -93,4 +94,65 @@
 .foundersDetails .text-info:hover {
   opacity: 100%;
   cursor: pointer;
+}
+
+#givingBack {
+  padding: 1rem 0;
+}
+
+.imgGivingBack {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+  background-size: cover;
+}
+
+.titleGivingBack {
+  font-weight: 700;
+}
+
+.txtGivingBack {
+  font-size: 105%;
+}
+
+#imgGreenVille,
+#imgSustainable {
+  background-position-y: 45%;
+}
+
+#imgSustainable {
+  background-position-x: 50%;
+}
+
+#imgYOUth {
+  background-position-y: 50%;
+}
+
+#employeeDetails {
+  padding: 0 25px 0 15px;
+  margin-left: 1.5rem;
+  width: fit-content;
+  position: relative;
+  top: 2rem;
+}
+
+.employeeImages {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 1.25rem 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.employeeNamesRoles p {
+  margin: 0;
+  line-height: 0.85;
+}
+
+.employeeStories {
+  width: 100%;
+  padding: 3rem 2rem 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 240, 240, 0.35);
 }

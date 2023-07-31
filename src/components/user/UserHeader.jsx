@@ -33,7 +33,7 @@ const UserHeader = () => {
 
   return (
     <div id="divNavHeader">
-      {["md"].map((expand) => (
+      {["xl"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
