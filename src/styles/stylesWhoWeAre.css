@@ -1,0 +1,96 @@
+#divAboutTheFounders,
+#divAboutTheCompany {
+  text-align: justify;
+}
+
+.divWhoWeAre {
+  width: 100%;
+  padding: 1rem 10% !important;
+}
+
+#divCompanyPerformance {
+  padding: 1.5rem 0;
+  background-color: cadetblue;
+}
+
+.divCompanyPerformanceCardGroup {
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.companyPerformanceCard {
+  margin: 0.75rem 0;
+  padding: 1rem 2.5rem;
+  box-shadow: 5px 8px 12px rgba(115, 95, 250, 0.1);
+}
+
+.companyPerformanceTitle {
+  font-size: 200%;
+}
+
+#foundersProfiles {
+  padding: 1rem 3rem 2rem;
+}
+
+.foundersProfileCards {
+  padding: 15px 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.foundersProfileCards p {
+  margin: 0;
+}
+
+.btnJumpToPortfolio {
+  opacity: 35%;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 120%;
+  border-radius: 50%;
+}
+
+.foundersPhotos {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1rem auto 1.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.foundersFullName {
+  font-size: 200%;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.foundersIconLinks {
+  padding: 0 20%;
+  font-size: 150%;
+}
+
+.foundersIconLinks a:hover {
+  opacity: 100% !important;
+  color: rgb(50, 185, 250) !important;
+}
+
+.dividerLine {
+  margin: 1rem auto;
+}
+
+.foundersDetails {
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.foundersDetails .text-info {
+  opacity: 60%;
+}
+
+.foundersDetails .text-info:hover {
+  opacity: 100%;
+  cursor: pointer;
+}

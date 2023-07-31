@@ -18,7 +18,7 @@ import Footer from "../../components/user/Footer";
 
 // Others
 import { ServiceTypesData } from "../../data/ServiceTypesData";
-import "../../styles/styleServices.css";
+import "../../styles/stylesServices.css";
 
 const Services = () => {
   return (

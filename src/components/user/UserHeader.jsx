@@ -7,6 +7,7 @@ import {
   faHouse,
   faHammer,
   faPaperPlane,
+  faGlobe,
   faMoon,
   faUser,
   faArrowRightFromBracket,
@@ -94,6 +95,15 @@ const UserHeader = () => {
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faPaperPlane} />
                       <p>Contact Us</p>
+                    </div>
+                  </Nav.Link>
+
+                  <Nav.Link
+                    href="/WhoWeAre"
+                    className="text-light">
+                    <div className="divNavMenu">
+                      <FontAwesomeIcon icon={faGlobe} />
+                      <p>Who We Are</p>
                     </div>
                   </Nav.Link>
 

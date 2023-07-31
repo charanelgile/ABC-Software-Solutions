@@ -21,7 +21,7 @@ import {
   faLinesLeaning,
   faCheckDouble,
   faMoon,
-  faArrowRightToBracket,
+  faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFolderClosed,
@@ -291,7 +291,7 @@ const DashboardSubscriptions = () => {
                           ) : (
                             <p className="sidePanelIcons text-primary">
                               <FontAwesomeIcon
-                                icon={faArrowRightToBracket}
+                                icon={faArrowRightFromBracket}
                                 onClick={handleAdminLogout}
                               />
                             </p>
