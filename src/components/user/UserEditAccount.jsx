@@ -59,11 +59,11 @@ const UserEditAccount = () => {
     });
 
     // Remove the old details of the Current User from the List of All Users
-    const retainedUsers = JSON.parse(localStorage.getItem("allUsers")).filter(
-      (user) => {
-        return user.userID !== currentUser[0].userID;
-      }
-    );
+    const retainedUsers = JSON.parse(
+      localStorage.getItem("allUsers")
+    ).filter((user) => {
+      return user.userID !== currentUser[0].userID;
+    });
 
     setAllUsers(retainedUsers);
 
@@ -90,7 +90,9 @@ const UserEditAccount = () => {
     <div>
       <UserHeader />
 
-      <form id="frmUserEditAccount" onSubmit={handleSaveEdits}>
+      <form
+        id="frmUserEditAccount"
+        onSubmit={handleSaveEdits}>
         <h5 className="text-light text-center mb-4 px-5 opacity-50">
           Edit your account details
         </h5>
@@ -128,7 +130,9 @@ const UserEditAccount = () => {
           ref={userEmailRef}
         />
 
-        <label htmlFor="userPassword" className="text-secondary">
+        <label
+          htmlFor="userPassword"
+          className="text-secondary">
           For verification purposes, please enter your password below.
         </label>
 
@@ -152,7 +156,7 @@ const UserEditAccount = () => {
           </button>
 
           <Link
-            to="/ABC-Software-Solutions/"
+            to="/"
             className="bg-tertiary text-light btn py-2">
             <FontAwesomeIcon icon={faXmark} />
             &nbsp;&nbsp;Cancel

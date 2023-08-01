@@ -123,7 +123,9 @@ const DashboardCompletedForms = () => {
   // -----------------------------------------------
 
   const { allAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin, setCurrentAdmin } = useContext(CurrentAdminContext);
+  const { currentAdmin, setCurrentAdmin } = useContext(
+    CurrentAdminContext
+  );
 
   const handleAdminLogout = () => {
     setCurrentAdmin([]);
@@ -141,7 +143,10 @@ const DashboardCompletedForms = () => {
         <div className="bg-dark text-light">
           <Box sx={{ display: "flex" }}>
             {/* <CssBaseline /> */}
-            <AppBar position="fixed" open={open} className="bg-primary">
+            <AppBar
+              position="fixed"
+              open={open}
+              className="bg-primary">
               <Toolbar>
                 <IconButton
                   aria-label="open drawer"
@@ -172,7 +177,9 @@ const DashboardCompletedForms = () => {
               open={open}
               className="bg-dark-midtone text-light">
               <DrawerHeader className="bg-dark-midtone">
-                <IconButton onClick={handleDrawerClose} className="text-light">
+                <IconButton
+                  onClick={handleDrawerClose}
+                  className="text-light">
                   {theme.direction === "rtl" ? (
                     <FontAwesomeIcon icon={faChevronLeft} />
                   ) : (
@@ -188,7 +195,10 @@ const DashboardCompletedForms = () => {
                   "Completed Forms",
                   "New Subscriptions",
                 ].map((text, index) => (
-                  <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                  <ListItem
+                    key={text}
+                    disablePadding
+                    sx={{ display: "block" }}>
                     <ListItemButton
                       sx={{
                         minHeight: 48,
@@ -204,7 +214,7 @@ const DashboardCompletedForms = () => {
                         {index === 0 ? (
                           <p className="sidePanelIcons text-primary">
                             <Link
-                              to="/ABC-Software-Solutions/DashboardOverview"
+                              to="/DashboardOverview"
                               className="text-primary">
                               <FontAwesomeIcon icon={faBolt} />
                             </Link>
@@ -212,7 +222,7 @@ const DashboardCompletedForms = () => {
                         ) : index === 1 ? (
                           <p className="sidePanelIcons text-primary">
                             <Link
-                              to="/ABC-Software-Solutions/DashboardSubmittedForms"
+                              to="/DashboardSubmittedForms"
                               className="text-primary">
                               <FontAwesomeIcon icon={faLinesLeaning} />
                             </Link>
@@ -220,7 +230,7 @@ const DashboardCompletedForms = () => {
                         ) : index === 2 ? (
                           <p className="sidePanelIcons text-primary">
                             <Link
-                              to="/ABC-Software-Solutions/DashboardCompletedForms"
+                              to="/DashboardCompletedForms"
                               className="text-primary">
                               <FontAwesomeIcon icon={faCheckDouble} />
                             </Link>
@@ -228,7 +238,7 @@ const DashboardCompletedForms = () => {
                         ) : (
                           <p className="sidePanelIcons text-primary">
                             <Link
-                              to="/ABC-Software-Solutions/DashboardSubscriptions"
+                              to="/DashboardSubscriptions"
                               className="text-primary">
                               <FontAwesomeIcon icon={faFolderClosed} />
                             </Link>
@@ -273,7 +283,7 @@ const DashboardCompletedForms = () => {
                           ) : index === 1 ? (
                             <p className="sidePanelIcons text-primary">
                               <Link
-                                to="/ABC-Software-Solutions/AdminEditAccount"
+                                to="/AdminEditAccount"
                                 className="text-primary">
                                 <FontAwesomeIcon icon={faUser} />
                               </Link>
@@ -307,7 +317,9 @@ const DashboardCompletedForms = () => {
               <DrawerHeader />
 
               <div className="text-end">
-                <p id="loggedAdmin" className="text-light text-end m-0">
+                <p
+                  id="loggedAdmin"
+                  className="text-light text-end m-0">
                   {currentAdmin[0].adminFirstName}{" "}
                   {currentAdmin[0].adminLastName}
                   <span className="opacity-75 fw-bold">

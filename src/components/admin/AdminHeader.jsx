@@ -23,7 +23,9 @@ import "../../styles/stylesHeader.css";
 
 const AdminHeader = () => {
   const { allAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin, setCurrentAdmin } = useContext(CurrentAdminContext);
+  const { currentAdmin, setCurrentAdmin } = useContext(
+    CurrentAdminContext
+  );
 
   const handleAdminLogout = () => {
     setCurrentAdmin([]);
@@ -41,7 +43,7 @@ const AdminHeader = () => {
           <Container fluid>
             <Navbar.Brand
               id="logo"
-              href="/ABC-Software-Solutions/DashboardOverview"
+              href="/DashboardOverview"
               className="text-light">
               ABC Software Solutions
             </Navbar.Brand>
@@ -58,9 +60,10 @@ const AdminHeader = () => {
               placement="start"
               className="bg-dark-midtone">
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}>
                   <Navbar.Brand
-                    href="/ABC-Software-Solutions/DashboardOverview"
+                    href="/DashboardOverview"
                     id="logoOffCanvas"
                     className="text-light fw-bold">
                     ABC Software Solutions
@@ -70,28 +73,36 @@ const AdminHeader = () => {
 
               <Offcanvas.Body className="text-light">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/" className="text-light">
+                  <Nav.Link
+                    href="/"
+                    className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faHouse} />
                       <p>Home</p>
                     </div>
                   </Nav.Link>
 
-                  <Nav.Link href="/Services" className="text-light">
+                  <Nav.Link
+                    href="/Services"
+                    className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faHammer} />
                       <p>Services</p>
                     </div>
                   </Nav.Link>
 
-                  <Nav.Link href="/ContactUs" className="text-light">
+                  <Nav.Link
+                    href="/ContactUs"
+                    className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faPaperPlane} />
                       <p>Contact Us</p>
                     </div>
                   </Nav.Link>
 
-                  <Nav.Link href="/WhoWeAre" className="text-light">
+                  <Nav.Link
+                    href="/WhoWeAre"
+                    className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faGlobe} />
                       <p>Who We Are</p>
@@ -111,7 +122,7 @@ const AdminHeader = () => {
 
                       <Link
                         id="navButtonEditUser"
-                        to="/ABC-Software-Solutions/AdminEditAccount"
+                        to="/AdminEditAccount"
                         className="navButtons bg-primary text-light btn">
                         <FontAwesomeIcon icon={faUser} />
                       </Link>
@@ -134,7 +145,7 @@ const AdminHeader = () => {
 
                       <Link
                         id="navButtonLogin"
-                        to="/ABC-Software-Solutions/AdminLogin"
+                        to="/AdminLogin"
                         className="bg-primary text-light btn fw-bold">
                         Login&nbsp;&nbsp;
                         <FontAwesomeIcon icon={faArrowRightToBracket} />
