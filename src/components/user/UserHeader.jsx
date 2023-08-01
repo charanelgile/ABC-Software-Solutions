@@ -41,7 +41,7 @@ const UserHeader = () => {
           <Container fluid>
             <Navbar.Brand
               id="logo"
-              href="/"
+              href="/ABC-Software-Solutions/"
               className="text-light">
               ABC Software Solutions
             </Navbar.Brand>
@@ -58,10 +58,9 @@ const UserHeader = () => {
               placement="start"
               className="bg-dark-midtone">
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title
-                  id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   <Navbar.Brand
-                    href="/"
+                    href="/ABC-Software-Solutions/"
                     id="logoOffCanvas"
                     className="text-light fw-bold">
                     ABC Software Solutions
@@ -72,7 +71,7 @@ const UserHeader = () => {
               <Offcanvas.Body className="text-light">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link
-                    href="/"
+                    href="/ABC-Software-Solutions/"
                     className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faHouse} />
@@ -81,7 +80,7 @@ const UserHeader = () => {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="/Services"
+                    href="/ABC-Software-Solutions/Services"
                     className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faHammer} />
@@ -90,7 +89,7 @@ const UserHeader = () => {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="/ContactUs"
+                    href="/ABC-Software-Solutions/ContactUs"
                     className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faPaperPlane} />
@@ -99,7 +98,7 @@ const UserHeader = () => {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="/WhoWeAre"
+                    href="/ABC-Software-Solutions/WhoWeAre"
                     className="text-light">
                     <div className="divNavMenu">
                       <FontAwesomeIcon icon={faGlobe} />
@@ -120,7 +119,7 @@ const UserHeader = () => {
 
                       <Link
                         id="navButtonEditUser"
-                        to="/UserEditAccount"
+                        to="/ABC-Software-Solutions/UserEditAccount"
                         className="navButtons bg-primary text-light btn">
                         <FontAwesomeIcon icon={faUser} />
                       </Link>
@@ -143,7 +142,7 @@ const UserHeader = () => {
 
                       <Link
                         id="navButtonLogin"
-                        to="/UserLogin"
+                        to="/ABC-Software-Solutions/UserLogin"
                         className="bg-primary text-light btn fw-bold">
                         Login&nbsp;&nbsp;
                         <FontAwesomeIcon icon={faArrowRightToBracket} />

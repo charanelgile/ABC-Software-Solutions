@@ -1,10 +1,7 @@
 // Library Imports
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleLeft,
-  faCheckToSlot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircleLeft, faCheckToSlot } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 // Context Imports
@@ -17,9 +14,7 @@ const SubscriptionConfirmation = () => {
   const newSubscription = useLocation();
   const clearSubscription = useNavigate();
 
-  const { subscriptions, setSubscriptions } = useContext(
-    SubscriptionsContext
-  );
+  const { subscriptions, setSubscriptions } = useContext(SubscriptionsContext);
 
   console.log(subscriptions);
 
@@ -39,12 +34,10 @@ const SubscriptionConfirmation = () => {
 
   return (
     <div id="subscriptionConfirmation">
-      <div
-        id="subscriptionConfirmationTop"
-        className="bg-primary">
+      <div id="subscriptionConfirmationTop" className="bg-primary">
         <div id="divCancelSubscription">
           <Link
-            to="/Services"
+            to="/ABC-Software-Solutions/Services"
             className="btnCancelSubscription text-light">
             <FontAwesomeIcon icon={faCircleLeft} />
           </Link>
@@ -52,9 +45,7 @@ const SubscriptionConfirmation = () => {
           <p className="text-center mt-2 mb-4">ABC Software Solutions</p>
         </div>
 
-        <div
-          id="divAlmostThere"
-          className="bg-dark text-light text-center">
+        <div id="divAlmostThere" className="bg-dark text-light text-center">
           <h3 id="almostThereText">You're almost there</h3>
 
           <h1 id="almostThereIcon">
@@ -76,16 +67,12 @@ const SubscriptionConfirmation = () => {
                 Kindly review the details of your subscription below.
                 <br />
                 Please{" "}
-                <Link
-                  className="text-primary"
-                  onClick={handleSubscribe}>
+                <Link className="text-primary" onClick={handleSubscribe}>
                   click here
                 </Link>{" "}
-                or on the button below to confirm your subscription. A copy
-                of this subscription will be sent to your email:{" "}
-                <b className="text-primary">
-                  {plan.subscrptnPlanSubscriber}
-                </b>
+                or on the button below to confirm your subscription. A copy of
+                this subscription will be sent to your email:{" "}
+                <b className="text-primary">{plan.subscrptnPlanSubscriber}</b>
               </p>
 
               <h1 className="text-center mt-4 mb-0">
@@ -137,9 +124,7 @@ const SubscriptionConfirmation = () => {
 
                     {inclusion.spiServices.map((service, index) => {
                       return (
-                        <p
-                          key={index + 1}
-                          className="inclusionsItems">
+                        <p key={index + 1} className="inclusionsItems">
                           {service}
                         </p>
                       );
@@ -156,9 +141,7 @@ const SubscriptionConfirmation = () => {
 
               {plan.subscrptnPlanFeatures.map((feature, index) => {
                 return (
-                  <p
-                    key={index + 1}
-                    className="featuresList">
+                  <p key={index + 1} className="featuresList">
                     {feature}
                   </p>
                 );
@@ -175,7 +158,7 @@ const SubscriptionConfirmation = () => {
 
               <div className="flexRowCenter">
                 <Link
-                  to="/Services"
+                  to="/ABC-Software-Solutions/Services"
                   id="btnCancelSubscription"
                   className="text-light bg-tertiary btn">
                   Cancel

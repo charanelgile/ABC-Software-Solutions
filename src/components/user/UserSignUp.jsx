@@ -34,8 +34,7 @@ const UserSignUp = () => {
     event.preventDefault();
 
     if (
-      userConfirmPasswordRef.current.value !==
-      userPasswordRef.current.value
+      userConfirmPasswordRef.current.value !== userPasswordRef.current.value
     ) {
       alert("Password and Confirm Password should match");
     } else {
@@ -52,11 +51,11 @@ const UserSignUp = () => {
 
       console.log(`Temp User Account:\n`, tempUserAccount);
 
-      matchingUserAccount = JSON.parse(
-        localStorage.getItem("allUsers")
-      ).filter((user) => {
-        return user.userEmail === tempUserAccount.userEmail;
-      });
+      matchingUserAccount = JSON.parse(localStorage.getItem("allUsers")).filter(
+        (user) => {
+          return user.userEmail === tempUserAccount.userEmail;
+        }
+      );
 
       matchingUserAccount.forEach((user) => {
         if (user.userEmail === tempUserAccount.userEmail) {
@@ -167,28 +166,22 @@ const UserSignUp = () => {
         <p className="opacity-50">Already have an account?&nbsp;&nbsp;</p>
 
         <Link
-          to="/UserLogin"
+          to="/ABC-Software-Solutions/UserLogin"
           className="btnLogin text-info text-decoration-none opacity-75">
           Login
         </Link>
       </div>
 
       <div className="extraLinks flexRowAround">
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Terms of Use</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Privacy Policy</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-light text-decoration-none opacity-50">
+        <a href="#!" className="text-light text-decoration-none opacity-50">
           <small>Contact Support</small>
         </a>
       </div>
