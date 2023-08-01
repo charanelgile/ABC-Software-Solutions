@@ -1,6 +1,6 @@
 // Library Imports
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Page Imports - Users
 import Home from "./pages/user/Home";
@@ -30,69 +30,45 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/ABC-Software-Solutions/UserLogin"
-          element={<UserLogin />}
-        />
+        <Route path="/UserLogin" element={<UserLogin />} />
+
+        <Route path="/UserSignUp" element={<UserSignUp />} />
+
+        <Route path="/UserEditAccount" element={<UserEditAccount />} />
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/Services" element={<Services />} />
 
         <Route
-          path="/ABC-Software-Solutions/UserSignUp"
-          element={<UserSignUp />}
-        />
-
-        <Route
-          path="/ABC-Software-Solutions/UserEditAccount"
-          element={<UserEditAccount />}
-        />
-
-        <Route path="/ABC-Software-Solutions/" element={<Home />} />
-
-        <Route path="/ABC-Software-Solutions/Services" element={<Services />} />
-
-        <Route
-          path="/ABC-Software-Solutions/SubscriptionConfirmation"
+          path="/SubscriptionConfirmation"
           element={<SubscriptionConfirmation />}
         />
 
-        <Route
-          path="/ABC-Software-Solutions/ContactUs"
-          element={<ContactUs />}
-        />
+        <Route path="/ContactUs" element={<ContactUs />} />
 
-        <Route path="/ABC-Software-Solutions/WhoWeAre" element={<WhoWeAre />} />
+        <Route path="/WhoWeAre" element={<WhoWeAre />} />
 
-        <Route
-          path="/ABC-Software-Solutions/AdminLogin"
-          element={<AdminLogin />}
-        />
+        <Route path="/AdminLogin" element={<AdminLogin />} />
 
-        <Route
-          path="/ABC-Software-Solutions/AdminSignUp"
-          element={<AdminSignUp />}
-        />
+        <Route path="/AdminSignUp" element={<AdminSignUp />} />
+
+        <Route path="/AdminEditAccount" element={<AdminEditAccount />} />
+
+        <Route path="/DashboardOverview" element={<DashboardOverview />} />
 
         <Route
-          path="/ABC-Software-Solutions/AdminEditAccount"
-          element={<AdminEditAccount />}
-        />
-
-        <Route
-          path="/ABC-Software-Solutions/DashboardOverview"
-          element={<DashboardOverview />}
-        />
-
-        <Route
-          path="/ABC-Software-Solutions/DashboardSubmittedForms"
+          path="/DashboardSubmittedForms"
           element={<DashboardSubmittedForms />}
         />
 
         <Route
-          path="/ABC-Software-Solutions/DashboardCompletedForms"
+          path="/DashboardCompletedForms"
           element={<DashboardCompletedForms />}
         />
 
         <Route
-          path="/ABC-Software-Solutions/DashboardSubscriptions"
+          path="/DashboardSubscriptions"
           element={<DashboardSubscriptions />}
         />
       </Routes>
