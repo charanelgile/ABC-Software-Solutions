@@ -20,9 +20,7 @@ const AdminSignUp = () => {
   const adminConfirmPasswordRef = useRef(null);
 
   const { allAdmins, setAllAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin, setCurrentAdmin } = useContext(
-    CurrentAdminContext
-  );
+  const { currentAdmin, setCurrentAdmin } = useContext(CurrentAdminContext);
 
   console.log(allAdmins);
 
@@ -36,8 +34,7 @@ const AdminSignUp = () => {
     event.preventDefault();
 
     if (
-      adminConfirmPasswordRef.current.value !==
-      adminPasswordRef.current.value
+      adminConfirmPasswordRef.current.value !== adminPasswordRef.current.value
     ) {
       alert("Password and Confirm Password should match");
     } else {
@@ -169,28 +166,22 @@ const AdminSignUp = () => {
         <p className="opacity-50">Already have an account?&nbsp;&nbsp;</p>
 
         <Link
-          to="/AdminLogin"
+          to="/ABC-Software-Solutions/AdminLogin"
           className="btnLogin text-info text-decoration-none opacity-75">
           Login
         </Link>
       </div>
 
       <div className="extraLinks flexRowAround">
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Terms of Use</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Privacy Policy</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-light text-decoration-none opacity-50">
+        <a href="#!" className="text-light text-decoration-none opacity-50">
           <small>Contact Support</small>
         </a>
       </div>

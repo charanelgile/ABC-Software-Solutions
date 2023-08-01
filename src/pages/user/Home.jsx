@@ -27,15 +27,12 @@ const Home = () => {
 
   return (
     <div>
-      <div
-        id="homeBannerImage"
-        className="bgSizeCover">
+      <div id="homeBannerImage" className="bgSizeCover">
         <UserHeader />
 
         <div id="homeBannerText">
           <h1 className="text-light fw-bold">
-            Tailor-made software solutions for your growing business'
-            needs.
+            Tailor-made software solutions for your growing business' needs.
           </h1>
 
           <p className="text-light">
@@ -45,19 +42,21 @@ const Home = () => {
           </p>
 
           <Link
-            to={currentUser.length > 0 ? "/Services" : "/UserLogin"}
+            to={
+              currentUser.length > 0
+                ? "/ABC-Software-Solutions/Services"
+                : "/ABC-Software-Solutions/UserLogin"
+            }
             className="text-light bg-transparent fw-bold btn border border-1">
             Get Started
           </Link>
         </div>
       </div>
 
-      <div
-        id="div5EasySteps"
-        className="bg-primary text-center">
+      <div id="div5EasySteps" className="bg-primary text-center">
         <p>
-          Experience high-quality service and cross-platform system in 5
-          easy steps
+          Experience high-quality service and cross-platform system in 5 easy
+          steps
         </p>
         <FontAwesomeIcon
           className="doubleArrowDown"

@@ -32,11 +32,11 @@ const UserLogin = () => {
       userPassword: userPasswordRef.current.value,
     };
 
-    matchingUserAccount = JSON.parse(
-      localStorage.getItem("allUsers")
-    ).filter((user) => {
-      return user.userEmail === tempUserAccount.userEmail;
-    });
+    matchingUserAccount = JSON.parse(localStorage.getItem("allUsers")).filter(
+      (user) => {
+        return user.userEmail === tempUserAccount.userEmail;
+      }
+    );
 
     matchingUserAccount.forEach((user) => {
       if (user.userEmail === tempUserAccount.userEmail) {
@@ -122,33 +122,25 @@ const UserLogin = () => {
       </form>
 
       <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
-        <p className="opacity-50">
-          Don't have an account yet?&nbsp;&nbsp;
-        </p>
+        <p className="opacity-50">Don't have an account yet?&nbsp;&nbsp;</p>
 
         <Link
-          to="/UserSignUp"
+          to="/ABC-Software-Solutions/UserSignUp"
           className="btnSignUp text-secondary text-decoration-none opacity-75">
           Sign Up
         </Link>
       </div>
 
       <div className="extraLinks flexRowAround">
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Terms of Use</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-primary text-decoration-none">
+        <a href="#!" className="text-primary text-decoration-none">
           <small>Privacy Policy</small>
         </a>
 
-        <a
-          href="#!"
-          className="text-light text-decoration-none opacity-50">
+        <a href="#!" className="text-light text-decoration-none opacity-50">
           <small>Contact Support</small>
         </a>
       </div>
