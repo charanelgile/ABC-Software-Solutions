@@ -28,7 +28,7 @@ export const FoundersProfilesData = [
     githubURL: "https://github.com/brianRaguine",
     facebookURL: "https://facebook.com/EcNeibEneugar",
     instagramURL: "https://facebook.com/EcNeibEneugar",
-    portfolioURL: "https://github.com/brianRaguine",
+    portfolioURL: "https://brianraguine.github.io/MyPortfolio/",
   },
   {
     profilePhoto:
