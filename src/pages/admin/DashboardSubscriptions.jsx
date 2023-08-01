@@ -335,7 +335,7 @@ const DashboardSubscriptions = () => {
                 </p>
               </div>
 
-              <h3 className="my-3 opacity-75">Subscriptions</h3>
+              <h3 className="mt-4 mb-3 opacity-75">Subscriptions</h3>
               <div id="divSubscriptions">
                 <DisplaySubscriptions />
               </div>
