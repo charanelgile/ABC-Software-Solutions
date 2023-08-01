@@ -1,6 +1,6 @@
 // Library Imports
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // Page Imports - Users
 import Home from "./pages/user/Home";
@@ -30,65 +30,32 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/UserLogin"
-          element={<UserLogin />}
-        />
+        <Route path="/UserLogin" element={<UserLogin />} />
 
-        <Route
-          path="UserSignUp"
-          element={<UserSignUp />}
-        />
+        <Route path="UserSignUp" element={<UserSignUp />} />
 
-        <Route
-          path="/UserEditAccount"
-          element={<UserEditAccount />}
-        />
+        <Route path="/UserEditAccount" element={<UserEditAccount />} />
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Route path="/" element={<Home />} />
 
-        <Route
-          path="/Services"
-          element={<Services />}
-        />
+        <Route path="/Services" element={<Services />} />
 
         <Route
           path="/SubscriptionConfirmation"
           element={<SubscriptionConfirmation />}
         />
 
-        <Route
-          path="/ContactUs"
-          element={<ContactUs />}
-        />
+        <Route path="/ContactUs" element={<ContactUs />} />
 
-        <Route
-          path="/WhoWeAre"
-          element={<WhoWeAre />}
-        />
+        <Route path="/WhoWeAre" element={<WhoWeAre />} />
 
-        <Route
-          path="/AdminLogin"
-          element={<AdminLogin />}
-        />
+        <Route path="/AdminLogin" element={<AdminLogin />} />
 
-        <Route
-          path="/AdminSignUp"
-          element={<AdminSignUp />}
-        />
+        <Route path="/AdminSignUp" element={<AdminSignUp />} />
 
-        <Route
-          path="/AdminEditAccount"
-          element={<AdminEditAccount />}
-        />
+        <Route path="/AdminEditAccount" element={<AdminEditAccount />} />
 
-        <Route
-          path="/DashboardOverview"
-          element={<DashboardOverview />}
-        />
+        <Route path="/DashboardOverview" element={<DashboardOverview />} />
 
         <Route
           path="/DashboardSubmittedForms"
