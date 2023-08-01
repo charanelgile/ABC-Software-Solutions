@@ -335,7 +335,7 @@ const DashboardSubmittedForms = () => {
                 </p>
               </div>
 
-              <h3 className="my-3 opacity-75">Submitted Forms:</h3>
+              <h3 className="mt-4 mb-3 opacity-75">Submitted Forms:</h3>
               <div id="divSubmittedContactForms">
                 <DisplayContactForms />
               </div>

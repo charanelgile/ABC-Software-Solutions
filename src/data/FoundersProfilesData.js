@@ -13,7 +13,7 @@ export const FoundersProfilesData = [
     githubURL: "https://github.com/ANZARIE/ANZARIE.github.io",
     facebookURL: "https://facebook.com/itsme.anza",
     instagramURL: "https://instagram.com/____________",
-    portfolioURL: "https://github.com/ANZARIE/ANZARIE.github.io",
+    portfolioURL: "https://anzarie.github.io/",
   },
   {
     profilePhoto:
