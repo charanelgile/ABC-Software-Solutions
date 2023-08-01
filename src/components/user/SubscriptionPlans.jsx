@@ -49,13 +49,15 @@ const SubscriptionPlans = () => {
 
     console.log(chosenSubscriptionPlan);
 
-    newSubscription("/ABC-Software-Solutions/SubscriptionConfirmation", {
+    newSubscription("/SubscriptionConfirmation", {
       state: chosenSubscriptionPlan[0],
     });
   };
 
   return (
-    <div id="subscriptionPlans" className="bg-dark-midtone">
+    <div
+      id="subscriptionPlans"
+      className="bg-dark-midtone">
       <h5 className="text-light text-center mb-3 opacity-75">
         Subscription Plans
       </h5>
@@ -97,9 +99,9 @@ const SubscriptionPlans = () => {
                   className="bg-primary text-center mb-4 px-5 rounded rounded-5"
                   onClick={() => {
                     allUsers.length === 0
-                      ? signUpRequired("/ABC-Software-Solutions/UserSignUp")
+                      ? signUpRequired("/UserSignUp")
                       : currentUser.length === 0
-                      ? loginRequired("/ABC-Software-Solutions/UserLogin")
+                      ? loginRequired("/UserLogin")
                       : handleGetPlan(plan.subscrptnPlanName);
                   }}>
                   GET {plan.subscrptnPlanName.toUpperCase()}
@@ -111,22 +113,26 @@ const SubscriptionPlans = () => {
                   </p>
 
                   <ul className="list-group list-group-flush">
-                    {plan.subscrptnPlanInclusions.map((inclusion, index) => (
-                      <li
-                        className="text-light list-group-item"
-                        key={index + 1}>
-                        <b className="opacity-75">{inclusion.spiServiceType}</b>
+                    {plan.subscrptnPlanInclusions.map(
+                      (inclusion, index) => (
+                        <li
+                          className="text-light list-group-item"
+                          key={index + 1}>
+                          <b className="opacity-75">
+                            {inclusion.spiServiceType}
+                          </b>
 
-                        {inclusion.spiServices.map((service, index) => {
-                          return (
-                            <p key={index + 1}>
-                              <ArrowRightTwoToneIcon />
-                              {service}
-                            </p>
-                          );
-                        })}
-                      </li>
-                    ))}
+                          {inclusion.spiServices.map((service, index) => {
+                            return (
+                              <p key={index + 1}>
+                                <ArrowRightTwoToneIcon />
+                                {service}
+                              </p>
+                            );
+                          })}
+                        </li>
+                      )
+                    )}
                   </ul>
 
                   {plan.subscrptnPlanFeatures.length === 0 ? (

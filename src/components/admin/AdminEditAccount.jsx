@@ -18,7 +18,9 @@ import "../../styles/stylesEditLoginSignUp.css";
 
 const AdminEditAccount = () => {
   const { allAdmins, setAllAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin, setCurrentAdmin } = useContext(CurrentAdminContext);
+  const { currentAdmin, setCurrentAdmin } = useContext(
+    CurrentAdminContext
+  );
 
   const adminFirstNameRef = useRef(null);
   const adminLastNameRef = useRef(null);
@@ -56,11 +58,11 @@ const AdminEditAccount = () => {
     });
 
     // Remove the old details of the Current Admin from the List of All Admins
-    const retainedAdmins = JSON.parse(localStorage.getItem("allAdmins")).filter(
-      (admin) => {
-        return admin.adminID !== currentAdmin[0].adminID;
-      }
-    );
+    const retainedAdmins = JSON.parse(
+      localStorage.getItem("allAdmins")
+    ).filter((admin) => {
+      return admin.adminID !== currentAdmin[0].adminID;
+    });
 
     setAllAdmins(retainedAdmins);
 
@@ -84,9 +86,12 @@ const AdminEditAccount = () => {
     <div>
       <AdminHeader />
 
-      <form id="frmAdminEditAccount" onSubmit={handleSaveEdits}>
+      <form
+        id="frmAdminEditAccount"
+        onSubmit={handleSaveEdits}>
         <h5 className="text-light text-center mb-4 px-5 opacity-50">
-          Edit <span className="text-secondary">admin</span> account details
+          Edit <span className="text-secondary">admin</span> account
+          details
         </h5>
 
         <label htmlFor="adminFirstName">First Name:</label>
@@ -122,7 +127,9 @@ const AdminEditAccount = () => {
           ref={adminEmailRef}
         />
 
-        <label htmlFor="adminPassword" className="text-secondary">
+        <label
+          htmlFor="adminPassword"
+          className="text-secondary">
           For verification purposes, please enter your password below.
         </label>
 
@@ -146,7 +153,7 @@ const AdminEditAccount = () => {
           </button>
 
           <Link
-            to="/ABC-Software-Solutions/DashboardOverview"
+            to="/DashboardOverview"
             className="bg-tertiary text-light btn py-2">
             <FontAwesomeIcon icon={faXmark} />
             &nbsp;&nbsp;Cancel

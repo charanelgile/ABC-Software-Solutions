@@ -17,7 +17,9 @@ const AdminLogin = () => {
   const adminPasswordRef = useRef(null);
 
   const { allAdmins } = useContext(AllAdminsContext);
-  const { currentAdmin, setCurrentAdmin } = useContext(CurrentAdminContext);
+  const { currentAdmin, setCurrentAdmin } = useContext(
+    CurrentAdminContext
+  );
 
   let matchingAdminAccount = [];
 
@@ -32,11 +34,11 @@ const AdminLogin = () => {
       adminPassword: adminPasswordRef.current.value,
     };
 
-    matchingAdminAccount = JSON.parse(localStorage.getItem("allAdmins")).filter(
-      (admin) => {
-        return admin.adminEmail === tempAdminAccount.adminEmail;
-      }
-    );
+    matchingAdminAccount = JSON.parse(
+      localStorage.getItem("allAdmins")
+    ).filter((admin) => {
+      return admin.adminEmail === tempAdminAccount.adminEmail;
+    });
 
     matchingAdminAccount.forEach((admin) => {
       if (admin.adminEmail === tempAdminAccount.adminEmail) {
@@ -86,7 +88,8 @@ const AdminLogin = () => {
   ) : (
     <div id="divAdminLogin">
       <h5 className="text-light text-center mb-4 opacity-75">
-        Sign in to your <span className="text-secondary">admin</span> account
+        Sign in to your <span className="text-secondary">admin</span>{" "}
+        account
       </h5>
 
       <form
@@ -122,25 +125,33 @@ const AdminLogin = () => {
       </form>
 
       <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
-        <p className="opacity-50">Don't have an account yet?&nbsp;&nbsp;</p>
+        <p className="opacity-50">
+          Don't have an account yet?&nbsp;&nbsp;
+        </p>
 
         <Link
-          to="/ABC-Software-Solutions/AdminSignUp"
+          to="/AdminSignUp"
           className="btnSignUp text-secondary text-decoration-none opacity-75">
           Sign Up
         </Link>
       </div>
 
       <div className="extraLinks flexRowAround">
-        <a href="#!" className="text-primary text-decoration-none">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
           <small>Terms of Use</small>
         </a>
 
-        <a href="#!" className="text-primary text-decoration-none">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
           <small>Privacy Policy</small>
         </a>
 
-        <a href="#!" className="text-light text-decoration-none opacity-50">
+        <a
+          href="#!"
+          className="text-light text-decoration-none opacity-50">
           <small>Contact Support</small>
         </a>
       </div>
