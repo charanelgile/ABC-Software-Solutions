@@ -1,9 +1,16 @@
+// Library Imports
 import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+
+// Component Imports
+import DashboardOverview from "../../pages/admin/DashboardOverview";
+
+// Context Imports
 import { AllAdminsContext } from "../../contexts/admin/AllAdminsContext";
 import { CurrentAdminContext } from "../../contexts/admin/CurrentAdminContext";
 
-import Dashboard from "../../pages/admin/Dashboard";
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const AdminSignUp = () => {
   const adminFirstNameRef = useRef(null);
@@ -89,17 +96,24 @@ const AdminSignUp = () => {
   };
 
   return allAdmins.length > 0 && currentAdmin.length > 0 ? (
-    <Dashboard />
+    <DashboardOverview />
   ) : (
-    <div>
-      <form onSubmit={handleAdminSignUp}>
+    <div id="divAdminSignUp">
+      <h5 className="text-light text-center mb-4 opacity-75">
+        Create an <span className="text-info">admin</span> account
+      </h5>
+
+      <form
+        id="frmAdminSignUp"
+        className="bg-dark-midtone"
+        onSubmit={handleAdminSignUp}>
         <label htmlFor="adminFirstName">First Name:</label>
         <input
           id="adminFirstName"
           name="adminFirstName"
           type="text"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminFirstNameRef}
         />
 
@@ -109,7 +123,7 @@ const AdminSignUp = () => {
           name="adminLastName"
           type="text"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminLastNameRef}
         />
 
@@ -119,7 +133,7 @@ const AdminSignUp = () => {
           name="adminEmail"
           type="email"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminEmailRef}
         />
 
@@ -129,7 +143,7 @@ const AdminSignUp = () => {
           name="adminPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminPasswordRef}
         />
 
@@ -139,25 +153,47 @@ const AdminSignUp = () => {
           name="adminConfirmPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminConfirmPasswordRef}
         />
 
         <button
-          id="adminSignUp"
+          id="btnAdminSignUp"
           type="submit"
-          className="btn btn-info w-25">
+          className="bg-primary text-light btn w-100">
           Sign Up
         </button>
       </form>
 
-      <p className="m-0">Already have an account?</p>
+      <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
+        <p className="opacity-50">Already have an account?&nbsp;&nbsp;</p>
 
-      <Link
-        to="/AdminLogin"
-        className="btn btn-warning w-25">
-        Login
-      </Link>
+        <Link
+          to="/AdminLogin"
+          className="btnLogin text-info text-decoration-none opacity-75">
+          Login
+        </Link>
+      </div>
+
+      <div className="extraLinks flexRowAround">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Terms of Use</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Privacy Policy</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-light text-decoration-none opacity-50">
+          <small>Contact Support</small>
+        </a>
+      </div>
     </div>
   );
 };

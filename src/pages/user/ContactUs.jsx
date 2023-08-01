@@ -10,7 +10,7 @@ import SubmitContactForm from "../../components/user/SubmitContactForm";
 import Footer from "../../components/user/Footer";
 
 // Others
-import "../../styles/styleContactUs.css";
+import "../../styles/stylesContactUs.css";
 
 const ContactUs = () => {
   return (

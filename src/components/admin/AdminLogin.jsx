@@ -1,9 +1,16 @@
+// Library Imports
 import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+
+// Component Imports
+import DashboardOverview from "../../pages/admin/DashboardOverview";
+
+// Context Imports
 import { AllAdminsContext } from "../../contexts/admin/AllAdminsContext";
 import { CurrentAdminContext } from "../../contexts/admin/CurrentAdminContext";
 
-import Dashboard from "../../pages/admin/Dashboard";
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const AdminLogin = () => {
   const adminEmailRef = useRef(null);
@@ -77,17 +84,25 @@ const AdminLogin = () => {
   };
 
   return allAdmins.length > 0 && currentAdmin.length > 0 ? (
-    <Dashboard />
+    <DashboardOverview />
   ) : (
-    <div>
-      <form onSubmit={handleAdminLogin}>
+    <div id="divAdminLogin">
+      <h5 className="text-light text-center mb-4 opacity-75">
+        Sign in to your <span className="text-secondary">admin</span>{" "}
+        account
+      </h5>
+
+      <form
+        id="frmAdminLogin"
+        className="bg-dark-midtone"
+        onSubmit={handleAdminLogin}>
         <label htmlFor="adminEmail">Email:</label>
         <input
           id="adminEmail"
           name="adminEmail"
           type="email"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminEmailRef}
         />
 
@@ -97,25 +112,49 @@ const AdminLogin = () => {
           name="adminPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={adminPasswordRef}
         />
 
         <button
-          id="adminLogin"
+          id="btnAdminLogin"
           type="submit"
-          className="btn btn-warning w-25">
+          className="bg-primary text-light btn w-100">
           Login
         </button>
       </form>
 
-      <p className="m-0">Don't have an account yet?</p>
+      <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
+        <p className="opacity-50">
+          Don't have an account yet?&nbsp;&nbsp;
+        </p>
 
-      <Link
-        to="/AdminSignUp"
-        className="btn btn-info w-25">
-        Sign Up
-      </Link>
+        <Link
+          to="/AdminSignUp"
+          className="btnSignUp text-secondary text-decoration-none opacity-75">
+          Sign Up
+        </Link>
+      </div>
+
+      <div className="extraLinks flexRowAround">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Terms of Use</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Privacy Policy</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-light text-decoration-none opacity-50">
+          <small>Contact Support</small>
+        </a>
+      </div>
     </div>
   );
 };

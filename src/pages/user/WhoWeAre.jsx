@@ -1,40 +1,39 @@
 // Library Imports
 import React from "react";
 
-// Components ang Pages Imports
-import HeaderPages from "../components/HeaderPages";
-import BannerImage from "../components/BannerImage";
-import SellingPoint from "../components/SellingPoint";
-import ProfileCard from "../components/ProfileCard";
-import GivingBack from "../components/GivingBack";
-import LifeAtABC from "../components/LifeAtABC";
-import Footer from "../components/Footer";
+// Component Imports
+import UserHeader from "../../components/user/UserHeader";
+import BannerImage from "../../components/user/BannerImage";
+import CompanyPerformance from "../../components/user/CompanyPerformance";
+import FoundersProfiles from "../../components/user/FoundersProfiles";
+import GivingBack from "../../components/user/GivingBack";
+import LifeAtABC from "../../components/user/LifeAtABC";
+import Footer from "../../components/user/Footer";
 
-// Miscellaneous Imports
-import { ProfileCardsData } from "../data/ProfileCardsData";
-import "../styles/styles.css";
-import "../styles/themes.css";
+// Others
+import { FoundersProfilesData } from "../../data/FoundersProfilesData";
+import "../../styles/stylesWhoWeAre.css";
 
 const WhoWeAre = () => {
   return (
-    <div className="bgColorLightTheme txtColorLightTheme">
-      <HeaderPages />
+    <div>
+      <UserHeader />
 
       <BannerImage
-        imageYaxis="35%"
-        imageURL='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        bannerPageTitle="Who We Are"
+        bannerPageText="Get to know ABC Software Solutions more and find out
+          what sets us apart from the rest."
+        bannerImage='linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
           url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ya21hdGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60")'
-        pageTitle="Who We Are"
-        pageText="Get to know ABC Software Solutions more and find out what sets us
-        apart from the rest."
+        bannerImageAlignment="35%"
       />
 
       <div
         id="divAboutTheCompany"
-        className="divWhoWeAre container-fluid">
-        <h3>About the Company</h3>
-
-        <hr />
+        className="divWhoWeAre bg-dark-midtone container-fluid">
+        <h5 className="text-center my-3 px-5 opacity-50">
+          About the Company
+        </h5>
 
         <p>
           &nbsp;&nbsp;&nbsp;The idea behind the company goes way back in
@@ -56,34 +55,37 @@ const WhoWeAre = () => {
         </p>
       </div>
 
-      <SellingPoint />
+      <CompanyPerformance />
 
       <div
         id="divAboutTheFounders"
-        className="divWhoWeAre container-fluid">
-        <h3>About the Founders</h3>
-
-        <hr />
+        className="divWhoWeAre bg-dark-midtone container-fluid">
+        <h5 className="text-center my-3 px-5 opacity-50">
+          About the Founders
+        </h5>
 
         <p>
-          &nbsp;&nbsp;&nbsp;Meet the <i>A, B,</i> and <i>C</i> of ABC
-          Software Solutions &ndash; Anzarie, Bryan, and Charanel &ndash;
-          the founding members of the company that started off as a
-          small-scale web development studio, now turned multi-million peso
-          corporation with partners like BPI, GCash, IBM, Shell, and other
-          big names in different industries in the country.
+          &nbsp;&nbsp;&nbsp;Meet the{" "}
+          <i className="text-secondary">A, B,</i> and{" "}
+          <i className="text-secondary">C</i> of ABC Software Solutions
+          &ndash; Anzarie, Bryan, and Charanel &ndash; the founding members
+          of the company that started off as a small-scale web development
+          studio, now turned multi-million peso corporation with partners
+          like BPI, Grab, Coca-Cola, Ayala Land, and other big names in
+          different industries in the country.
         </p>
       </div>
 
       <div
-        id="divProfileCards"
-        className="flexRowEven">
-        {ProfileCardsData.map((profile, index) => {
+        id="foundersProfiles"
+        className="bg-dark-midtone">
+        {FoundersProfilesData.map((profile, index) => {
           return (
-            <ProfileCard
+            <FoundersProfiles
               key={index + 1}
               profilePhoto={profile.profilePhoto}
-              fullName={profile.fullName}
+              firstName={profile.firstName}
+              lastName={profile.lastName}
               shortIntro={profile.shortIntro}
               email={profile.email}
               phone={profile.phone}
@@ -98,11 +100,11 @@ const WhoWeAre = () => {
       </div>
 
       <div
-        id="divGivingBack"
-        className="divWhoWeAre container-fluid">
-        <h3>Giving Back to the Community</h3>
-
-        <hr />
+        id="givingBack"
+        className="bg-dark">
+        <h5 className="text-center my-3 px-5 opacity-50">
+          Giving Back to the Community
+        </h5>
 
         <GivingBack
           image1='linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)),
@@ -115,22 +117,23 @@ const WhoWeAre = () => {
       </div>
 
       <div
-        id="divLifeAtABC"
-        className="divWhoWeAre container-fluid">
-        <h3>#LifeAtABC</h3>
-
-        <hr />
+        id="lifeAtABC"
+        className="divWhoWeAre bg-dark-midtone">
+        <h5 className="text-center my-3 px-5 opacity-50">Life at ABC</h5>
 
         <p>
           &nbsp;&nbsp;&nbsp;Hear our employees' stories about how the
           company has helped them achieve their goals and succeed in life
           all while being a part of our diverse, talented, and passionate
-          team so you can see for yourself what makes #LifeAtABC amazing
-          and rewarding, at the same time.
+          team so you can see for yourself what makes{" "}
+          <span className="text-secondary">#LifeAtABC</span> amazing and
+          rewarding, at the same time.
         </p>
 
         <LifeAtABC />
       </div>
+
+      <div className="bg-dark-midtone">&nbsp;</div>
 
       <Footer />
     </div>

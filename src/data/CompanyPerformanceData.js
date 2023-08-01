@@ -1,4 +1,4 @@
-export const SellingPointDataA = [
+export const CompanyPerformanceData1 = [
   {
     title: "25+ years",
     text: "of experience at the forefront of the tech industry",
@@ -13,7 +13,7 @@ export const SellingPointDataA = [
   },
 ];
 
-export const SellingPointDataB = [
+export const CompanyPerformanceData2 = [
   {
     title: "5-Step",
     text: "comprehensive software solution for business growth",

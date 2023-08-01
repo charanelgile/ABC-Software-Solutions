@@ -58,6 +58,8 @@ const SubmitContactForm = () => {
 
     console.log(submittedContactForm);
 
+    alert("Contact Form submitted successfully");
+
     contactFirstNameRef.current.value = null;
     contactLastNameRef.current.value = null;
     contactBusinessNameRef.current.value = null;
@@ -206,7 +208,7 @@ const SubmitContactForm = () => {
         id="visitUs"
         className="bg-dark-midtone">
         <h5 className="text-light text-center mb-4 px-5 opacity-50">
-          Visit us in our Cebu Office
+          Visit us in our Head Office
         </h5>
 
         <iframe

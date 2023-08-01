@@ -1,9 +1,16 @@
+// Library Imports
 import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+
+// Component Imports
+import Home from "../../pages/user/Home";
+
+// Context Imports
 import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
 
-import Home from "../../pages/user/Home";
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const UserLogin = () => {
   const userEmailRef = useRef(null);
@@ -77,15 +84,22 @@ const UserLogin = () => {
   return allUsers.length > 0 && currentUser.length > 0 ? (
     <Home />
   ) : (
-    <div>
-      <form onSubmit={handleUserLogin}>
+    <div id="divUserLogin">
+      <h5 className="text-light text-center mb-4 opacity-75">
+        Sign in to your account
+      </h5>
+
+      <form
+        id="frmUserLogin"
+        className="bg-dark-midtone"
+        onSubmit={handleUserLogin}>
         <label htmlFor="userEmail">Email:</label>
         <input
           id="userEmail"
           name="userEmail"
           type="email"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userEmailRef}
         />
 
@@ -95,25 +109,49 @@ const UserLogin = () => {
           name="userPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           ref={userPasswordRef}
         />
 
         <button
-          id="userLogin"
+          id="btnUserLogin"
           type="submit"
-          className="btn btn-primary w-25">
+          className="bg-primary text-light btn w-100">
           Login
         </button>
       </form>
 
-      <p className="m-0">Don't have an account yet?</p>
+      <div className="suggestLoginOrSignUp bg-dark-midtone flexRowCenter">
+        <p className="opacity-50">
+          Don't have an account yet?&nbsp;&nbsp;
+        </p>
 
-      <Link
-        to="/UserSignUp"
-        className="btn btn-success w-25">
-        Sign Up
-      </Link>
+        <Link
+          to="/UserSignUp"
+          className="btnSignUp text-secondary text-decoration-none opacity-75">
+          Sign Up
+        </Link>
+      </div>
+
+      <div className="extraLinks flexRowAround">
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Terms of Use</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-primary text-decoration-none">
+          <small>Privacy Policy</small>
+        </a>
+
+        <a
+          href="#!"
+          className="text-light text-decoration-none opacity-50">
+          <small>Contact Support</small>
+        </a>
+      </div>
     </div>
   );
 };

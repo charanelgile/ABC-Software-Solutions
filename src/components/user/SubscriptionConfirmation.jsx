@@ -11,7 +11,7 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import { SubscriptionsContext } from "../../contexts/user/SubscriptionsContext";
 
 // Others
-import "../../styles/styleServices.css";
+import "../../styles/stylesServices.css";
 
 const SubscriptionConfirmation = () => {
   const newSubscription = useLocation();

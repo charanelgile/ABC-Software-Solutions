@@ -1,7 +1,20 @@
+// Library Imports
 import React, { useContext, useRef } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+
+// Component Imports
+import AdminHeader from "./AdminHeader";
 import AdminLogin from "./AdminLogin";
+import AdminSignUp from "./AdminSignUp";
+
+// Context Imports
 import { AllAdminsContext } from "../../contexts/admin/AllAdminsContext";
 import { CurrentAdminContext } from "../../contexts/admin/CurrentAdminContext";
+
+// Others
+import "../../styles/stylesEditLoginSignUp.css";
 
 const AdminEditAccount = () => {
   const { allAdmins, setAllAdmins } = useContext(AllAdminsContext);
@@ -65,20 +78,30 @@ const AdminEditAccount = () => {
     adminPasswordRef.current.value = null;
   };
 
-  return allAdmins.length === 0 && currentAdmin.length === 0 ? (
+  return allAdmins.length === 0 ? (
+    <AdminSignUp />
+  ) : currentAdmin.length === 0 ? (
     <AdminLogin />
   ) : (
     <div>
-      <h1>Admin Edit Account</h1>
+      <AdminHeader />
 
-      <form onSubmit={handleSaveEdits}>
+      <form
+        id="frmAdminEditAccount"
+        onSubmit={handleSaveEdits}>
+        <h5 className="text-light text-center mb-4 px-5 opacity-50">
+          Edit <span className="text-secondary">admin</span> account
+          details
+        </h5>
+
         <label htmlFor="adminFirstName">First Name:</label>
         <input
           id="adminFirstName"
           name="adminFirstName"
           type="text"
           required
-          className="form-control"
+          placeholder="Enter updated First Name"
+          className="form-control shadow-none"
           ref={adminFirstNameRef}
         />
 
@@ -88,7 +111,8 @@ const AdminEditAccount = () => {
           name="adminLastName"
           type="text"
           required
-          className="form-control"
+          placeholder="Enter updated Last Name"
+          className="form-control shadow-none"
           ref={adminLastNameRef}
         />
 
@@ -98,30 +122,43 @@ const AdminEditAccount = () => {
           name="adminEmail"
           type="email"
           required
-          className="form-control"
+          placeholder="Enter updated Email Address"
+          className="form-control shadow-none"
           ref={adminEmailRef}
         />
 
-        <p className="text-danger">
-          For verification purposes, please enter your password.
-        </p>
+        <label
+          htmlFor="adminPassword"
+          className="text-secondary">
+          For verification purposes, please enter your password below.
+        </label>
 
         <input
           id="adminPassword"
           name="adminPassword"
           type="password"
           required
-          className="form-control"
+          className="form-control shadow-none"
           placeholder="Enter your password for verification"
           ref={adminPasswordRef}
         />
 
-        <button
-          id="btnSave"
-          type="submit"
-          className="btn btn-warning w-25">
-          Save
-        </button>
+        <div className="flexRowBetween">
+          <button
+            id="btnSave"
+            type="submit"
+            className="bg-primary text-light btn py-2">
+            <FontAwesomeIcon icon={faCheck} />
+            &nbsp;&nbsp;Save
+          </button>
+
+          <Link
+            to="/DashboardOverview"
+            className="bg-tertiary text-light btn py-2">
+            <FontAwesomeIcon icon={faXmark} />
+            &nbsp;&nbsp;Cancel
+          </Link>
+        </div>
       </form>
     </div>
   );
