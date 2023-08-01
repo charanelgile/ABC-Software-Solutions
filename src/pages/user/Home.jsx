@@ -12,6 +12,7 @@ import TestimonialsService from "../../components/user/TestimonialsService";
 import Footer from "../../components/user/Footer";
 
 // Context Imports
+import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
 
 // Others
@@ -23,6 +24,7 @@ import { TestimonialsServiceData } from "../../data/TestimonialsServiceData";
 import "../../styles/stylesHome.css";
 
 const Home = () => {
+  const { allUsers } = useContext(AllUsersContext);
   const { currentUser } = useContext(CurrentUserContext);
 
   return (
@@ -45,7 +47,13 @@ const Home = () => {
           </p>
 
           <Link
-            to={currentUser.length > 0 ? "/Services" : "/UserLogin"}
+            to={
+              allUsers.length === 0
+                ? "/UserSignUp"
+                : currentUser.length === 0
+                ? "/UserLogin"
+                : "/Services"
+            }
             className="text-light bg-transparent fw-bold btn border border-1">
             Get Started
           </Link>
