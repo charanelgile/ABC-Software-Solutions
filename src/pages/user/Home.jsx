@@ -16,11 +16,11 @@ import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
 
 // Others
+import { TestimonialsServiceData } from "../../data/TestimonialsServiceData";
 import {
   FiveStepSolutionDataOdd,
   FiveStepSolutionDataEven,
 } from "../../data/FiveStepSolutionData";
-import { TestimonialsServiceData } from "../../data/TestimonialsServiceData";
 import "../../styles/stylesHome.css";
 
 const Home = () => {

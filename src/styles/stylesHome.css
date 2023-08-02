@@ -7,7 +7,8 @@
       rgba(0, 0, 0, 0.5)
     ),
     url("https://images.unsplash.com/photo-1634908800785-d3df980d179e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHdvbWFuJTIwaW4lMjBjYWZlJTIwd2l0aCUyMGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
-  background-position-x: 60%;
+  background-position-x: 60% !important;
+  background-size: cover;
 }
 
 #homeBannerText {

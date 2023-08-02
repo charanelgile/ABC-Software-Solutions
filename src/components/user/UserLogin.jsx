@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 // Component Imports
 import Home from "../../pages/user/Home";
-import AdminHeader from "../admin/AdminHeader";
 // Context Imports
 import { AllUsersContext } from "../../contexts/user/AllUsersContext";
 import { CurrentUserContext } from "../../contexts/user/CurrentUserContext";
@@ -84,7 +83,6 @@ const UserLogin = () => {
   return allUsers.length > 0 && currentUser.length > 0 ? (
     <Home />
   ) : (
-    
     <div id="divUserLogin">
       <h5 className="text-light text-center mb-4 opacity-75">
         Sign in to your account
